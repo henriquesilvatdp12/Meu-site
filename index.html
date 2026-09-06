@@ -1,4 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Divulgação Henrique | Unhas e Divulgações</title>
+
+<meta name="description" content="Divulgação Henrique - Divulgação de serviços, ofertas e unhas. Alongamento em fibra de vidro, esmaltação em gel, blindagem e banho em gel.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff5fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #d81b60, #8e24aa);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #8e24aa;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.hero h2 {
+    color: #d81b60;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.section-title {
+    text-align: center;
+    color: #8e24aa;
+    font-size: 28px;
+    margin: 35px 0 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+.unhas {
+    background: linear-gradient(135deg, #ffe0ef, #f3d8ff);
+    border-radius: 25px;
+    padding: 30px 20px;
+    margin-top: 25px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.unhas h2 {
+    text-align: center;
+    color: #c2185b;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.unhas .descricao {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.servico {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #8e24aa;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.servico span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.unhas .btn {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+}
+
+.sobre {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    line-height: 1.7;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.contato {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer {
+    background: #4a148c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 62px;
+    height: 62px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📢 Divulgação Henrique</h1>
+    <p>Divulgue. Encontre. Conecte-se.</p>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#divulgacoes">Divulgações</a>
+    <a href="#unhas">💅 Unhas</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <div class="container">
+        <h2>Bem-vindo à Divulgação Henrique!</h2>
+
+        <p>
+            Encontre serviços, ofertas e divulgações em um só lugar.
+            Entre em contato pelo WhatsApp para saber mais.
+        </p>
+
+        <a class="btn"
+           href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
+           target="_blank">
+           📲 Falar pelo WhatsApp
+        </a>
+    </div>
+</section>
+
+<section id="divulgacoes" class="container">
+
+    <h2 class="section-title">📢 Divulgações</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>📣 Divulgue seu negócio</h3>
+            <p>
+                Quer divulgar seu serviço ou produto?
+                Entre em contato e saiba como anunciar.
+            </p>
+
+            <a class="btn"
+               href="https://wa.me/5562984920692?text=Olá%20Henrique,%20quero%20divulgar%20meu%20negócio."
+               target="_blank">
+               Quero divulgar
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>💰 Ofertas</h3>
+            <p>
+                Confira divulgações, serviços e oportunidades.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📱 Atendimento</h3>
+            <p>
+                Fale diretamente com Henrique pelo WhatsApp.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SEÇÃO DE UNHAS -->
+
+<section id="unhas" class="container">
+
+    <div class="unhas">
+
+        <h2>💅 Divulgação de Unhas</h2>
+
+        <p class="descricao">
+            Realce sua beleza com unhas lindas e bem cuidadas! ✨
+        </p>
+
+        <div class="servicos">
+
+            <div class="servico">
+                <span>💅</span>
+                Alongamento em fibra de vidro
+            </div>
+
+            <div class="servico">
+                <span>💖</span>
+                Esmaltação em gel
+            </div>
+
+            <div class="servico">
+                <span>✨</span>
+                Blindagem
+            </div>
+
+            <div class="servico">
+                <span>🌸</span>
+                Banho em gel
+            </div>
+
+        </div>
+
+        <a class="btn"
+           href="https://wa.me/5562984920692?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20serviços%20de%20unhas."
+           target="_blank">
+           📲 Agendar pelo WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+<section id="sobre" class="container">
+
+    <h2 class="section-title">ℹ️ Sobre</h2>
+
+    <div class="sobre">
+
+        <p>
+            <strong>Divulgação Henrique</strong> é uma página criada
+            para divulgar serviços, produtos, ofertas e oportunidades.
+        </p>
+
+        <br>
+
+        <p>
+            Aqui você pode encontrar diferentes divulgações e entrar
+            diretamente em contato pelo WhatsApp.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="contato" class="contato">
+
+    <h2 class="section-title">📞 Contato</h2>
+
+    <p>Entre em contato pelo WhatsApp:</p>
+
+    <a class="btn"
+       href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
+       target="_blank">
+       📲 WhatsApp
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 Divulgação Henrique</p>
+    <p>Todos os direitos reservados.</p>
+</footer>
+
+<!-- BOTÃO WHATSAPP FIXO -->
+
+<a class="whatsapp"
+   href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
+   target="_blank"
+   aria-label="Falar no WhatsApp">
+   💬
+</a>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
