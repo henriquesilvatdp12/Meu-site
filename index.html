@@ -1,37 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Divulgação Henrique | Ofertas e Serviços</title>
 
-  <meta name="description"
-        content="Divulgação Henrique — encontre ofertas, serviços, contatos e informações em um só lugar.">
-
-  <meta name="keywords"
-        content="Divulgação Henrique, divulgação, ofertas, serviços, contatos">
-
-  <meta name="author" content="Divulgação Henrique">
-
-  <meta name="robots" content="index, follow">
-
-  <!-- Google Search Console -->
-  <!-- Se você já recebeu um código de verificação do Google,
-       coloque a meta tag fornecida pelo Search Console aqui. -->
-
-  <meta property="og:title"
-        content="Divulgação Henrique">
-
-  <meta property="og:description"
-        content="Ofertas, serviços e informações divulgadas por Henrique.">
-
-  <meta property="og:type" content="website">
-
-  <meta property="og:url"
-        content="https://henriquesilvatdp12.github.io/Meu-site/">
+  <meta name="description" content="Divulgação Henrique - encontre ofertas, serviços e oportunidades. Entre em contato pelo WhatsApp.">
 
   <style>
     * {
@@ -41,7 +16,7 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: #f5f5f5;
       color: #222;
       line-height: 1.6;
@@ -51,46 +26,50 @@
       background: linear-gradient(135deg, #111, #333);
       color: white;
       text-align: center;
-      padding: 45px 20px;
+      padding: 50px 20px;
     }
 
     header h1 {
-      font-size: 38px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 18px;
-      opacity: 0.9;
     }
 
-    main {
+    .container {
       max-width: 900px;
       margin: 30px auto;
       padding: 0 20px;
     }
 
-    section {
+    .card {
       background: white;
-      margin-bottom: 25px;
       padding: 30px;
+      margin-bottom: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
-    h2 {
+    .card h2 {
       margin-bottom: 15px;
-      font-size: 25px;
+      font-size: 26px;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      color: #555;
     }
 
     .botao {
       display: inline-block;
-      margin-top: 15px;
-      padding: 14px 24px;
       background: #111;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      padding: 13px 25px;
+      border-radius: 8px;
       font-weight: bold;
     }
 
@@ -99,11 +78,35 @@
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
       background: #111;
       color: white;
+      text-align: center;
+      padding: 25px 15px;
       margin-top: 40px;
+    }
+
+    /* WhatsApp fixo */
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 62px;
+      height: 62px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 9999;
+      transition: transform 0.2s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
     }
 
     @media (max-width: 600px) {
@@ -111,8 +114,15 @@
         font-size: 30px;
       }
 
-      section {
+      .card {
         padding: 22px;
+      }
+
+      .whatsapp {
+        right: 15px;
+        bottom: 15px;
+        width: 58px;
+        height: 58px;
       }
     }
   </style>
@@ -122,45 +132,31 @@
 
   <header>
     <h1>Divulgação Henrique</h1>
-    <p>Ofertas, serviços e informações em um só lugar</p>
+    <p>Ofertas, serviços e oportunidades em um só lugar.</p>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section>
-      <h2>Bem-vindo à Divulgação Henrique</h2>
-
+    <section class="card">
+      <h2>📢 Divulgação Henrique</h2>
       <p>
-        Este é o site oficial da <strong>Divulgação Henrique</strong>.
-        Aqui você pode encontrar ofertas, serviços, contatos e outras
-        informações importantes.
+        Encontre informações, ofertas e serviços divulgados
+        de forma simples e rápida.
       </p>
 
-      <p style="margin-top: 12px;">
-        Acompanhe as novidades e confira as oportunidades divulgadas
-        por Henrique.
-      </p>
-    </section>
-
-    <section>
-      <h2>📢 Divulgação</h2>
-
-      <p>
-        Encontre aqui as principais divulgações, ofertas e serviços.
-      </p>
-
-      <!-- Troque o # pelo seu link quando quiser -->
-      <a href="#" class="botao">
-        Ver divulgação
+      <a class="botao"
+         href="https://wa.me/5562984920692?text=Oi%2C%20vim%20pelo%20site%20Divulga%C3%A7%C3%A3o%20Henrique"
+         target="_blank"
+         rel="noopener">
+        Falar pelo WhatsApp
       </a>
     </section>
 
-    <section>
+    <section class="card">
       <h2>📱 Entre em contato</h2>
-
       <p>
-        Para saber mais informações, entre em contato através do
-        canal de atendimento disponível na divulgação.
+        Clique no botão verde no canto da tela para falar
+        diretamente comigo pelo WhatsApp.
       </p>
     </section>
 
@@ -168,8 +164,16 @@
 
   <footer>
     <p>© 2026 Divulgação Henrique</p>
-    <p>Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Botão WhatsApp fixo -->
+  <a class="whatsapp"
+     href="https://wa.me/5562984920692?text=Oi%2C%20vim%20pelo%20site%20Divulga%C3%A7%C3%A3o%20Henrique"
+     target="_blank"
+     rel="noopener"
+     aria-label="Falar com Henrique pelo WhatsApp">
+    💬
+  </a>
 
 </body>
 </html>
