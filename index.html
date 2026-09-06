@@ -1,179 +1,697 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Divulgação Henrique | Ofertas e Serviços</title>
+<title>Divulgação Henrique | Ofertas e Serviços</title>
 
-  <meta name="description" content="Divulgação Henrique - encontre ofertas, serviços e oportunidades. Entre em contato pelo WhatsApp.">
+<meta name="description" content="Divulgação Henrique — ofertas, serviços, oportunidades e informações. Entre em contato pelo WhatsApp.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-      line-height: 1.6;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    header {
-      background: linear-gradient(135deg, #111, #333);
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f6f9;
+  color:#222;
+}
 
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+header{
+  background:linear-gradient(135deg,#111827,#2563eb);
+  color:white;
+  padding:18px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
 
-    header p {
-      font-size: 18px;
-    }
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      margin-bottom: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-size:14px;
+  font-weight:bold;
+}
 
-    .card h2 {
-      margin-bottom: 15px;
-      font-size: 26px;
-    }
+.hero{
+  min-height:550px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#0f172a,#1d4ed8);
+  color:white;
+}
 
-    .card p {
-      margin-bottom: 20px;
-      color: #555;
-    }
+.hero-content{
+  max-width:800px;
+}
 
-    .botao {
-      display: inline-block;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      padding: 13px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.12);
+  padding:8px 15px;
+  border-radius:30px;
+  margin-bottom:20px;
+}
 
-    .botao:hover {
-      opacity: 0.85;
-    }
+.hero h1{
+  font-size:clamp(40px,8vw,70px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
 
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 40px;
-    }
+.hero h1 span{
+  color:#60a5fa;
+}
 
-    /* WhatsApp fixo */
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 62px;
-      height: 62px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 32px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      z-index: 9999;
-      transition: transform 0.2s;
-    }
+.hero p{
+  font-size:18px;
+  color:#e5e7eb;
+}
 
-    .whatsapp:hover {
-      transform: scale(1.1);
-    }
+.buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
-      }
+.btn{
+  display:inline-block;
+  padding:15px 24px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-      .card {
-        padding: 22px;
-      }
+.btn-whatsapp{
+  background:#22c55e;
+  color:white;
+}
 
-      .whatsapp {
-        right: 15px;
-        bottom: 15px;
-        width: 58px;
-        height: 58px;
-      }
-    }
-  </style>
+.btn-secondary{
+  background:white;
+  color:#1d4ed8;
+}
+
+section{
+  padding:70px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.title h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.title p{
+  color:#64748b;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#64748b;
+}
+
+.about{
+  background:white;
+  text-align:center;
+}
+
+.about-content{
+  max-width:800px;
+  margin:auto;
+}
+
+.about-content p{
+  color:#64748b;
+  font-size:18px;
+}
+
+.contact{
+  background:#1d4ed8;
+  color:white;
+  text-align:center;
+}
+
+.contact p{
+  margin:15px 0 25px;
+}
+
+footer{
+  background:#0f172a;
+  color:#94a3b8;
+  text-align:center;
+  padding:30px 20px;
+}
+
+
+/* =========================
+   BOTÃO DO CHAT
+========================= */
+
+.chat-button{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:#22c55e;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:31px;
+  cursor:pointer;
+  box-shadow:0 6px 25px rgba(0,0,0,.25);
+  z-index:9999;
+  border:none;
+}
+
+
+/* =========================
+   JANELA DO CHAT
+========================= */
+
+.chat-box{
+  position:fixed;
+  right:20px;
+  bottom:95px;
+  width:340px;
+  max-width:calc(100% - 40px);
+  background:white;
+  border-radius:18px;
+  box-shadow:0 10px 40px rgba(0,0,0,.25);
+  overflow:hidden;
+  display:none;
+  z-index:9998;
+}
+
+.chat-header{
+  background:#22c55e;
+  color:white;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.chat-header strong{
+  font-size:17px;
+}
+
+.close-chat{
+  background:none;
+  border:none;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.chat-body{
+  padding:20px;
+}
+
+.message{
+  background:#f1f5f9;
+  padding:13px;
+  border-radius:12px;
+  margin-bottom:15px;
+  font-size:14px;
+}
+
+.chat-body label{
+  display:block;
+  margin-bottom:7px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.chat-body input,
+.chat-body textarea{
+  width:100%;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  padding:12px;
+  margin-bottom:12px;
+  font-family:Arial;
+  font-size:14px;
+}
+
+.chat-body textarea{
+  height:90px;
+  resize:none;
+}
+
+.send-chat{
+  width:100%;
+  border:none;
+  padding:13px;
+  border-radius:10px;
+  background:#22c55e;
+  color:white;
+  font-weight:bold;
+  font-size:15px;
+  cursor:pointer;
+}
+
+.send-chat:hover{
+  background:#16a34a;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:800px){
+
+  .nav{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .nav a{
+    margin:0 5px;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:44px;
+  }
+
+}
+
+@media(max-width:450px){
+
+  .chat-box{
+    right:10px;
+    bottom:85px;
+    width:calc(100% - 20px);
+  }
+
+  .chat-button{
+    right:15px;
+    bottom:15px;
+  }
+
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Divulgação Henrique</h1>
-    <p>Ofertas, serviços e oportunidades em um só lugar.</p>
-  </header>
+<header>
 
-  <main class="container">
+<div class="nav">
 
-    <section class="card">
-      <h2>📢 Divulgação Henrique</h2>
-      <p>
-        Encontre informações, ofertas e serviços divulgados
-        de forma simples e rápida.
-      </p>
+<div class="logo">
+Divulgação Henrique
+</div>
 
-      <a class="botao"
-         href="https://wa.me/5562984920692?text=Oi%2C%20vim%20pelo%20site%20Divulga%C3%A7%C3%A3o%20Henrique"
-         target="_blank"
-         rel="noopener">
-        Falar pelo WhatsApp
-      </a>
-    </section>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#divulgacoes">Divulgações</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
 
-    <section class="card">
-      <h2>📱 Entre em contato</h2>
-      <p>
-        Clique no botão verde no canto da tela para falar
-        diretamente comigo pelo WhatsApp.
-      </p>
-    </section>
+</div>
 
-  </main>
+</header>
 
-  <footer>
-    <p>© 2026 Divulgação Henrique</p>
-  </footer>
 
-  <!-- Botão WhatsApp fixo -->
-  <a class="whatsapp"
-     href="https://wa.me/5562984920692?text=Oi%2C%20vim%20pelo%20site%20Divulga%C3%A7%C3%A3o%20Henrique"
-     target="_blank"
-     rel="noopener"
-     aria-label="Falar com Henrique pelo WhatsApp">
-    💬
-  </a>
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<div class="badge">
+📢 Divulgação Henrique
+</div>
+
+<h1>
+Divulgue.<br>
+Encontre.<br>
+<span>Conecte-se.</span>
+</h1>
+
+<p>
+Ofertas, serviços, oportunidades e informações
+em um só lugar.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/5562984920692"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a
+class="btn btn-secondary"
+href="#divulgacoes">
+Ver divulgações
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="divulgacoes">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Divulgações</h2>
+
+<p>
+Confira nossas principais categorias.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">📢</div>
+
+<h3>Publicidade</h3>
+
+<p>
+Divulgação de produtos, serviços e oportunidades.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>Ofertas</h3>
+
+<p>
+Encontre ofertas e oportunidades divulgadas.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📲</div>
+
+<h3>Contato</h3>
+
+<p>
+Fale diretamente pelo WhatsApp.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about" id="sobre">
+
+<div class="about-content">
+
+<h2>Sobre o Divulgação Henrique</h2>
+
+<br>
+
+<p>
+Um espaço criado para facilitar a divulgação
+de serviços, ofertas e oportunidades.
+</p>
+
+<br>
+
+<p>
+Tudo de forma simples, rápida e acessível
+pelo celular.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="contact" id="contato">
+
+<div class="container">
+
+<h2>Entre em contato</h2>
+
+<p>
+Quer saber mais? Fale comigo pelo WhatsApp.
+</p>
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/5562984920692"
+target="_blank">
+💬 Falar no WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+© <span id="ano"></span> Divulgação Henrique
+</p>
+
+<p>
+Todos os direitos reservados.
+</p>
+
+</footer>
+
+
+
+<!-- =========================
+     JANELA DO CHAT
+========================= -->
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+
+<strong>💬 Chat Divulgação Henrique</strong>
+
+<button
+class="close-chat"
+onclick="fecharChat()">
+×
+</button>
+
+</div>
+
+
+<div class="chat-body">
+
+<div class="message">
+
+Olá! 👋<br><br>
+
+Bem-vindo ao <strong>Divulgação Henrique</strong>.
+
+Como posso ajudar?
+
+</div>
+
+
+<label>Seu nome</label>
+
+<input
+type="text"
+id="nome"
+placeholder="Digite seu nome">
+
+
+<label>Sua mensagem</label>
+
+<textarea
+id="mensagem"
+placeholder="Digite sua mensagem..."></textarea>
+
+
+<button
+class="send-chat"
+onclick="enviarWhatsApp()">
+
+📲 Enviar pelo WhatsApp
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     BOTÃO FLUTUANTE
+========================= -->
+
+<button
+class="chat-button"
+onclick="abrirChat()"
+aria-label="Abrir chat">
+
+💬
+
+</button>
+
+
+
+<script>
+
+document.getElementById("ano").textContent =
+new Date().getFullYear();
+
+
+function abrirChat(){
+
+document.getElementById("chatBox").style.display="block";
+
+}
+
+
+function fecharChat(){
+
+document.getElementById("chatBox").style.display="none";
+
+}
+
+
+function enviarWhatsApp(){
+
+const nome =
+document.getElementById("nome").value.trim();
+
+const mensagem =
+document.getElementById("mensagem").value.trim();
+
+
+if(nome === ""){
+
+alert("Digite seu nome.");
+
+return;
+
+}
+
+
+if(mensagem === ""){
+
+alert("Digite sua mensagem.");
+
+return;
+
+}
+
+
+const texto =
+"Olá Henrique! 👋%0A%0A" +
+"Meu nome é " +
+encodeURIComponent(nome) +
+".%0A%0A" +
+encodeURIComponent(mensagem);
+
+
+const numero =
+"5562984920692";
+
+
+const link =
+"https://wa.me/" +
+numero +
+"?text=" +
+texto;
+
+
+window.open(link,"_blank");
+
+}
+
+</script>
 
 </body>
 </html>
