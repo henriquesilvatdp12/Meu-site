@@ -1,804 +1,529 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Divulgação Henrique | Anuncie seus produtos e serviços</title>
-
-  <meta name="description"
-        content="Divulgação Henrique - anuncie produtos, serviços e oportunidades. Publique seu anúncio de forma rápida e simples.">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #f5f6fa;
-      color: #222;
-      line-height: 1.5;
-    }
-
-    header {
-      background: linear-gradient(135deg, #111827, #2563eb);
-      color: white;
-      padding: 18px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,.15);
-    }
-
-    .header-content {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: bold;
-    }
-
-    .logo-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: white;
-      color: #2563eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 900;
-    }
-
-    .logo-text strong {
-      display: block;
-      font-size: 20px;
-    }
-
-    .logo-text span {
-      font-size: 12px;
-      opacity: .85;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
-      color: white;
-      padding: 65px 20px;
-    }
-
-    .hero-content {
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 6vw, 55px);
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-      opacity: .95;
-    }
-
-    .buttons {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 15px;
-      transition: .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      background: white;
-      color: #1d4ed8;
-    }
-
-    .btn-dark {
-      background: #111827;
-      color: white;
-    }
-
-    .btn-green {
-      background: #16a34a;
-      color: white;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #666;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 15px;
-    }
-
-    .category {
-      background: white;
-      padding: 22px 12px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,.06);
-      cursor: pointer;
-      transition: .2s;
-    }
-
-    .category:hover {
-      transform: translateY(-4px);
-    }
-
-    .category .icon {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .search-box {
-      margin: 25px 0;
-      display: flex;
-      gap: 10px;
-    }
-
-    .search-box input {
-      flex: 1;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .ads {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .ad {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.07);
-    }
-
-    .ad-category {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 5px 9px;
-      border-radius: 20px;
-      font-size: 12px;
-      margin-bottom: 12px;
-    }
-
-    .ad h3 {
-      margin-bottom: 8px;
-    }
-
-    .ad p {
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-
-    .how {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .step {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,.06);
-    }
-
-    .number {
-      width: 45px;
-      height: 45px;
-      margin: 0 auto 15px;
-      background: #2563eb;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    .form-container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 5px 25px rgba(0,0,0,.08);
-    }
-
-    .form-group {
-      margin-bottom: 17px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ddd;
-      border-radius: 9px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .pix-box {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      padding: 18px;
-      border-radius: 12px;
-      margin: 20px 0;
-    }
-
-    .pix-key {
-      background: white;
-      padding: 12px;
-      border-radius: 8px;
-      word-break: break-all;
-      margin: 10px 0;
-      font-size: 14px;
-    }
-
-    .price-box {
-      text-align: center;
-      background: #f0fdf4;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
-    .price-box strong {
-      font-size: 32px;
-      color: #15803d;
-    }
-
-    .notice {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      padding: 14px;
-      border-radius: 10px;
-      font-size: 13px;
-      margin-top: 15px;
-    }
-
-    .contact {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .contact h2 {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background: #030712;
-      color: #aaa;
-      text-align: center;
-      padding: 22px;
-      font-size: 13px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #25D366;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 27px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.25);
-      z-index: 2000;
-    }
-
-    @media (max-width: 650px) {
-      nav {
-        display: none;
-      }
-
-      .hero {
-        padding: 50px 18px;
-      }
-
-      .search-box {
-        flex-direction: column;
-      }
-
-      .form-container {
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="header-content">
-
-    <div class="logo">
-      <div class="logo-icon">DH</div>
-
-      <div class="logo-text">
-        <strong>Divulgação Henrique</strong>
-        <span>Seu anúncio, mais visibilidade.</span>
-      </div>
-    </div>
-
-    <nav>
-      <a href="#anuncios">Anúncios</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#publicar">Publicar</a>
-    </nav>
-
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-content">
-
-    <h1>Divulgue seu negócio para mais pessoas</h1>
-
-    <p>
-      Publique produtos, serviços e oportunidades no Divulgação Henrique
-      e aumente a visibilidade do seu anúncio.
-    </p>
-
-    <div class="buttons">
-      <a href="#publicar" class="btn btn-primary">
-        📢 Publicar meu anúncio
-      </a>
-
-      <a href="#anuncios" class="btn btn-dark">
-        🔎 Ver anúncios
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>Encontre o que procura</h2>
-    <p>Escolha uma categoria para encontrar anúncios.</p>
-  </div>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="icon">💅</div>
-      <strong>Beleza</strong>
-    </div>
-
-    <div class="category">
-      <div class="icon">🛍️</div>
-      <strong>Produtos</strong>
-    </div>
-
-    <div class="category">
-      <div class="icon">🔧</div>
-      <strong>Serviços</strong>
-    </div>
-
-    <div class="category">
-      <div class="icon">🚗</div>
-      <strong>Veículos</strong>
-    </div>
-
-    <div class="category">
-      <div class="icon">💼</div>
-      <strong>Empregos</strong>
-    </div>
-
-    <div class="category">
-      <div class="icon">🏠</div>
-      <strong>Imóveis</strong>
-    </div>
-
-  </div>
-</section>
-
-<section id="anuncios">
-
-  <div class="section-title">
-    <h2>Anúncios em destaque</h2>
-    <p>Confira algumas das publicações.</p>
-  </div>
-
-  <div class="search-box">
-    <input
-      type="search"
-      id="search"
-      placeholder="🔎 Pesquisar anúncios..."
-      onkeyup="buscarAnuncios()"
-    >
-  </div>
-
-  <div class="ads" id="listaAnuncios">
-
-    <div class="ad">
-      <span class="ad-category">Beleza</span>
-      <h3>Alongamento em fibra de vidro</h3>
-      <p>
-        Alongamento, esmaltação em gel, blindagem e banho em gel.
-      </p>
-      <div class="price">Consulte o valor</div>
-      <a href="#contato" class="btn btn-green">Entrar em contato</a>
-    </div>
-
-    <div class="ad">
-      <span class="ad-category">Serviços</span>
-      <h3>Divulgue seu serviço</h3>
-      <p>
-        Coloque seu serviço em destaque e alcance novos clientes.
-      </p>
-      <div class="price">A partir de R$ 5</div>
-      <a href="#publicar" class="btn btn-primary">Publicar</a>
-    </div>
-
-    <div class="ad">
-      <span class="ad-category">Produtos</span>
-      <h3>Venda seus produtos</h3>
-      <p>
-        Apresente seus produtos para pessoas interessadas.
-      </p>
-      <div class="price">Confira</div>
-      <a href="#publicar" class="btn btn-primary">Anunciar</a>
-    </div>
-
-  </div>
-</section>
-
-<section id="como-funciona">
-
-  <div class="section-title">
-    <h2>Como funciona?</h2>
-    <p>É simples publicar seu anúncio.</p>
-  </div>
-
-  <div class="how">
-
-    <div class="step">
-      <div class="number">1</div>
-      <h3>Crie seu anúncio</h3>
-      <p>
-        Informe o título, categoria, descrição e seus dados de contato.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="number">2</div>
-      <h3>Faça o pagamento</h3>
-      <p>
-        O valor da publicação é de apenas R$ 5,00.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="number">3</div>
-      <h3>Envie o comprovante</h3>
-      <p>
-        Envie o comprovante junto com as informações do anúncio.
-      </p>
-    </div>
-
-    <div class="step">
-      <div class="number">4</div>
-      <h3>Seu anúncio aparece</h3>
-      <p>
-        Após a conferência, o anúncio pode ser publicado no site.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="publicar">
-
-  <div class="section-title">
-    <h2>📢 Publique seu anúncio</h2>
-    <p>Preencha os dados abaixo.</p>
-  </div>
-
-  <div class="form-container">
-
-    <div class="price-box">
-      <div>Valor da publicação</div>
-      <strong>R$ 5,00</strong>
-    </div>
-
-    <form id="formAnuncio">
-
-      <div class="form-group">
-        <label for="nome">Seu nome</label>
-        <input
-          type="text"
-          id="nome"
-          placeholder="Digite seu nome"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <label for="titulo">Título do anúncio</label>
-        <input
-          type="text"
-          id="titulo"
-          placeholder="Ex.: Manicure profissional"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <label for="categoria">Categoria</label>
-
-        <select id="categoria" required>
-          <option value="">Selecione</option>
-          <option>Beleza</option>
-          <option>Produtos</option>
-          <option>Serviços</option>
-          <option>Veículos</option>
-          <option>Empregos</option>
-          <option>Imóveis</option>
-          <option>Outros</option>
-        </select>
-
-      </div>
-
-      <div class="form-group">
-        <label for="descricao">Descrição</label>
-
-        <textarea
-          id="descricao"
-          placeholder="Descreva seu produto ou serviço..."
-          required
-        ></textarea>
-
-      </div>
-
-      <div class="form-group">
-        <label for="telefone">WhatsApp</label>
-
-        <input
-          type="tel"
-          id="telefone"
-          placeholder="Ex.: (62) 99999-9999"
-          required
-        >
-
-      </div>
-
-      <div class="pix-box">
-
-        <h3>💳 Pagamento via Pix</h3>
-
-        <p>
-          Valor da publicação:
-          <strong>R$ 5,00</strong>
-        </p>
-
-        <div class="pix-key" id="pixKey">
-          30ae9503-548c-446a-9211-8d9884639535
-        </div>
-
-        <button
-          type="button"
-          class="btn btn-dark"
-          onclick="copiarPix()"
-        >
-          📋 Copiar chave Pix
-        </button>
-
-        <div class="notice">
-          Depois de realizar o Pix, envie o comprovante junto com
-          os dados do anúncio.
-        </div>
-
-      </div>
-
-      <button
-        type="submit"
-        class="btn btn-green"
-        style="width:100%;"
-      >
-        📲 Enviar anúncio pelo WhatsApp
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
-
-<section class="contact" id="contato">
-
-  <h2>Fale com a Divulgação Henrique</h2>
-
-  <p>
-    Tem alguma dúvida ou precisa de ajuda para publicar?
-  </p>
-
-  <div class="buttons">
-
-    <a
-      href="https://wa.me/5562984920692"
-      target="_blank"
-      class="btn btn-green"
-    >
-      💬 Falar pelo WhatsApp
-    </a>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <p>
-    © 2026 Divulgação Henrique — Todos os direitos reservados.
-  </p>
-
-  <p style="margin-top:6px;">
-    Publicidade e divulgação de produtos e serviços.
-  </p>
-
-</footer>
-
-<a
-  class="whatsapp"
-  href="https://wa.me/5562984920692"
-  target="_blank"
-  aria-label="WhatsApp"
->
-  ☎
-</a>
+<!-- ASSISTENTE VIRTUAL -->
+
+<div class="assistant">
+
+<div class="chat" id="chat">
+
+<div class="chatHead">
+
+<div>
+
+<b>
+🤖 Assistente DH
+</b>
+
+<small>
+Olá! Posso ajudar você.
+</small>
+
+</div>
+
+<button
+class="close"
+onclick="toggleChat()">
+
+×
+
+</button>
+
+</div>
+
+<div
+class="messages"
+id="messages">
+
+<div class="msg bot">
+
+Olá! 👋
+
+Eu sou o assistente do
+Divulgação Henrique.
+
+Posso explicar como publicar,
+o valor, o Pix ou ajudar você
+a encontrar uma seção do site.
+
+</div>
+
+</div>
+
+<div class="quick">
+
+<button
+onclick="perguntar('Quanto custa publicar?')">
+
+💰 Preço
+
+</button>
+
+<button
+onclick="perguntar('Como publicar?')">
+
+📢 Como publicar
+
+</button>
+
+<button
+onclick="perguntar('Qual é o Pix?')">
+
+💳 Pix
+
+</button>
+
+<button
+onclick="perguntar('WhatsApp')">
+
+📱 WhatsApp
+
+</button>
+
+</div>
+
+<div class="chatInput">
+
+<input
+id="chatText"
+placeholder="Digite sua pergunta..."
+onkeydown="if(event.key==='Enter') enviar()">
+
+<button onclick="enviar()">
+Enviar
+</button>
+
+<button
+onclick="ouvir()"
+title="Falar">
+
+🎤
+
+</button>
+
+</div>
+
+</div>
+
+
+<!--
+IMPORTANTE:
+
+Coloque a imagem que você enviou
+na mesma pasta deste index.html
+com o nome:
+
+robo.png
+
+-->
+
+<img
+id="robot"
+class="robot"
+src="robo.png"
+alt="Assistente virtual Divulgação Henrique"
+onclick="toggleChat">
+
+</div>
+
 
 <script>
 
-  const PIX =
-    "30ae9503-548c-446a-9211-8d9884639535";
+const PIX =
+"30ae9503-548c-446a-9211-8d9884639535";
 
-  function copiarPix() {
+const ADMIN_WA =
+"5562984920692";
 
-    navigator.clipboard.writeText(PIX);
 
-    alert("Chave Pix copiada!");
+/* COPIAR PIX */
 
-  }
+function copiarPix(){
 
-  function buscarAnuncios() {
+navigator.clipboard
+.writeText(PIX)
+.then(function(){
 
-    const texto =
-      document.getElementById("search").value.toLowerCase();
+alert("Chave Pix copiada!");
 
-    const anuncios =
-      document.querySelectorAll(".ad");
+})
+.catch(function(){
 
-    anuncios.forEach(function(anuncio) {
+alert(
+"Copie a chave Pix manualmente:\n\n"
++ PIX
+);
 
-      const conteudo =
-        anuncio.innerText.toLowerCase();
+});
 
-      anuncio.style.display =
-        conteudo.includes(texto) ? "block" : "none";
+}
 
-    });
 
-  }
+/* PESQUISA */
 
-  document
-    .getElementById("formAnuncio")
-    .addEventListener("submit", function(event) {
+function buscar(){
 
-      event.preventDefault();
+const q =
+document
+.getElementById("search")
+.value
+.toLowerCase();
 
-      const nome =
-        document.getElementById("nome").value;
+document
+.querySelectorAll(".ad")
+.forEach(function(ad){
 
-      const titulo =
-        document.getElementById("titulo").value;
+ad.style.display =
+ad.innerText
+.toLowerCase()
+.includes(q)
+? "block"
+: "none";
 
-      const categoria =
-        document.getElementById("categoria").value;
+});
 
-      const descricao =
-        document.getElementById("descricao").value;
+}
 
-      const telefone =
-        document.getElementById("telefone").value;
 
-      const mensagem =
+/* ABRIR CHAT */
+
+function toggleChat(){
+
+document
+.getElementById("chat")
+.classList
+.toggle("open");
+
+}
+
+
+/* MENSAGEM */
+
+function addMsg(text,who){
+
+const box =
+document.getElementById("messages");
+
+const msg =
+document.createElement("div");
+
+msg.className =
+"msg " + who;
+
+msg.textContent =
+text;
+
+box.appendChild(msg);
+
+box.scrollTop =
+box.scrollHeight;
+
+}
+
+
+/* RESPOSTAS */
+
+function responder(q){
+
+const t =
+q.toLowerCase();
+
+
+if(
+t.includes("preço") ||
+t.includes("valor") ||
+t.includes("custa") ||
+t.includes("5")
+){
+
+return "A publicação custa R$ 5,00. 💰";
+
+}
+
+
+if(
+t.includes("pix") ||
+t.includes("pagar")
+){
+
+return (
+"A chave Pix é:\n\n"
++ PIX
++ "\n\nDepois, envie o comprovante junto com os dados do anúncio."
+);
+
+}
+
+
+if(
+t.includes("publicar") ||
+t.includes("anúncio") ||
+t.includes("anuncio")
+){
+
+return (
+"Para publicar, vá até a seção "
++ "“Publique seu anúncio”, preencha "
++ "os dados, faça o Pix de R$ 5,00 "
++ "e envie pelo WhatsApp. 📢"
+);
+
+}
+
+
+if(
+t.includes("whatsapp") ||
+t.includes("contato")
+){
+
+return (
+"Você pode falar com a Divulgação "
++ "Henrique pelo botão de WhatsApp "
++ "do site. 📱"
+);
+
+}
+
+
+if(
+t.includes("beleza") ||
+t.includes("unha")
+){
+
+return (
+"Na categoria Beleza você pode "
++ "divulgar serviços como unhas, "
++ "esmaltação em gel, blindagem "
++ "e banho em gel. 💅"
+);
+
+}
+
+
+if(
+t.includes("oi") ||
+t.includes("olá") ||
+t.includes("ola")
+){
+
+return (
+"Olá! 😄 Como posso ajudar? "
++ "Posso explicar o preço, Pix "
++ "ou como publicar."
+);
+
+}
+
+
+return (
+"Ainda estou aprendendo! 🤖\n\n"
++ "Tente perguntar sobre preço, "
++ "Pix, publicação ou WhatsApp."
+);
+
+}
+
+
+/* PERGUNTAR */
+
+function perguntar(q){
+
+addMsg(q,"user");
+
+setTimeout(function(){
+
+const resposta =
+responder(q);
+
+addMsg(
+resposta,
+"bot"
+);
+
+falar(resposta);
+
+},300);
+
+}
+
+
+/* ENVIAR */
+
+function enviar(){
+
+const input =
+document.getElementById("chatText");
+
+const q =
+input.value.trim();
+
+if(!q){
+return;
+}
+
+input.value="";
+
+perguntar(q);
+
+}
+
+
+/* FALAR */
+
+function falar(text){
+
+if(
+!("speechSynthesis" in window)
+){
+return;
+}
+
+speechSynthesis.cancel();
+
+const voz =
+new SpeechSynthesisUtterance(
+text.replace(/\n/g," ")
+);
+
+voz.lang="pt-BR";
+voz.rate=.95;
+
+const robot =
+document.getElementById("robot");
+
+robot.classList.add("speaking");
+
+voz.onend=function(){
+
+robot.classList.remove(
+"speaking"
+);
+
+};
+
+speechSynthesis.speak(voz);
+
+}
+
+
+/* MICROFONE */
+
+function ouvir(){
+
+const SR =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+if(!SR){
+
+alert(
+"Seu navegador não oferece "
++ "reconhecimento de voz. "
++ "Você pode digitar."
+);
+
+return;
+
+}
+
+const reconhecimento =
+new SR();
+
+reconhecimento.lang =
+"pt-BR";
+
+reconhecimento.interimResults =
+false;
+
+reconhecimento.maxAlternatives =
+1;
+
+const robot =
+document.getElementById("robot");
+
+robot.classList.add("speaking");
+
+reconhecimento.start();
+
+
+reconhecimento.onresult =
+function(event){
+
+robot.classList.remove(
+"speaking"
+);
+
+document.getElementById(
+"chatText"
+).value =
+event.results[0][0].transcript;
+
+enviar();
+
+};
+
+
+reconhecimento.onerror =
+function(){
+
+robot.classList.remove(
+"speaking"
+);
+
+};
+
+
+reconhecimento.onend =
+function(){
+
+robot.classList.remove(
+"speaking"
+);
+
+};
+
+}
+
+
+/* FORMULÁRIO */
+
+document
+.getElementById("form")
+.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+
+const nome =
+document.getElementById(
+"nome"
+).value;
+
+
+const titulo =
+document.getElementById(
+"titulo"
+).value;
+
+
+const categoria =
+document.getElementById(
+"categoria"
+).value;
+
+
+const descricao =
+document.getElementById(
+"descricao"
+).value;
+
+
+const telefone =
+document.getElementById(
+"telefone"
+).value;
+
+
+const mensagem =
 `📢 NOVO ANÚNCIO - DIVULGAÇÃO HENRIQUE
 
 👤 Nome: ${nome}
@@ -814,18 +539,21 @@ ${descricao}
 
 💰 Publicação: R$ 5,00
 
-💳 Pagamento via Pix:
+💳 Pix:
 ${PIX}
 
 📎 Vou enviar o comprovante do Pix nesta conversa.`;
 
-      const url =
-        "https://wa.me/5562984920692?text=" +
-        encodeURIComponent(mensagem);
 
-      window.open(url, "_blank");
+window.open(
+"https://wa.me/"
++ ADMIN_WA
++ "?text="
++ encodeURIComponent(mensagem),
+"_blank"
+);
 
-    });
+});
 
 </script>
 
