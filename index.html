@@ -1,8 +1,1141 @@
-<!-- ASSISTENTE VIRTUAL -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description"
+content="Divulgação Henrique - anuncie produtos e serviços por apenas R$ 5,00.">
+
+<title>Divulgação Henrique</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.5;
+}
+
+header{
+background:linear-gradient(135deg,#111827,#2563eb);
+color:#fff;
+padding:14px 18px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px #0003;
+}
+
+.nav{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+gap:10px;
+align-items:center;
+}
+
+.mark{
+background:#fff;
+color:#2563eb;
+border-radius:12px;
+padding:11px;
+font-weight:900;
+}
+
+.logo b{
+display:block;
+}
+
+.logo small{
+display:block;
+opacity:.8;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:15px;
+font-size:14px;
+}
+
+.hero{
+padding:70px 18px;
+text-align:center;
+color:#fff;
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+.hero h1{
+font-size:clamp(34px,8vw,58px);
+line-height:1.05;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.btn{
+border:0;
+border-radius:10px;
+padding:13px 18px;
+font-weight:700;
+text-decoration:none;
+display:inline-block;
+cursor:pointer;
+font-size:15px;
+}
+
+.white{
+background:#fff;
+color:#1d4ed8;
+}
+
+.green{
+background:#16a34a;
+color:#fff;
+}
+
+.dark{
+background:#111827;
+color:#fff;
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:50px 18px;
+}
+
+.title{
+text-align:center;
+margin-bottom:25px;
+}
+
+.title h2{
+font-size:30px;
+}
+
+.title p{
+color:#667085;
+}
+
+.cards,
+.ads,
+.steps{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+gap:16px;
+}
+
+.card,
+.ad,
+.step,
+.form{
+background:#fff;
+border-radius:16px;
+padding:22px;
+box-shadow:0 5px 20px #00000012;
+}
+
+.card{
+text-align:center;
+}
+
+.ico{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+margin-bottom:18px;
+font-size:16px;
+}
+
+.tag{
+display:inline-block;
+background:#e0e7ff;
+color:#3730a3;
+border-radius:20px;
+padding:4px 9px;
+font-size:12px;
+margin-bottom:9px;
+}
+
+.ad p{
+color:#667085;
+margin:8px 0 15px;
+}
+
+.price{
+font-weight:800;
+margin-bottom:14px;
+}
+
+.num{
+width:42px;
+height:42px;
+background:#2563eb;
+color:#fff;
+border-radius:50%;
+display:grid;
+place-items:center;
+margin:0 auto 10px;
+font-weight:bold;
+}
+
+.step{
+text-align:center;
+}
+
+.form{
+max-width:720px;
+margin:auto;
+}
+
+.group{
+margin-bottom:15px;
+}
+
+.group label{
+display:block;
+font-weight:bold;
+margin-bottom:5px;
+}
+
+.group input,
+.group select,
+.group textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:9px;
+font-size:15px;
+}
+
+.group textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.pix{
+background:#eff6ff;
+border:1px solid #bfdbfe;
+border-radius:12px;
+padding:16px;
+margin:18px 0;
+}
+
+.pixkey{
+background:#fff;
+padding:11px;
+border-radius:8px;
+word-break:break-all;
+margin:9px 0;
+font-size:13px;
+}
+
+.contact{
+background:#111827;
+color:#fff;
+text-align:center;
+padding:45px 18px;
+}
+
+.contact p{
+margin-top:7px;
+}
+
+footer{
+background:#030712;
+color:#aaa;
+text-align:center;
+padding:20px;
+font-size:13px;
+}
+
+
+/* =========================
+   ASSISTENTE VIRTUAL
+========================= */
+
+.assistant{
+position:fixed;
+right:14px;
+bottom:14px;
+z-index:5000;
+}
+
+.robotBtn{
+width:105px;
+height:105px;
+border:3px solid #fff;
+border-radius:50%;
+background:linear-gradient(145deg,#eaf8ff,#8bd7ff);
+box-shadow:0 8px 25px #0005;
+cursor:pointer;
+display:grid;
+place-items:center;
+animation:float 2.5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-7px);
+}
+
+}
+
+.robotSvg{
+width:90px;
+height:90px;
+}
+
+.chat{
+display:none;
+position:absolute;
+right:0;
+bottom:118px;
+width:min(360px,calc(100vw - 28px));
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 12px 45px #0005;
+}
+
+.chat.open{
+display:block;
+}
+
+.chatHead{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+color:#fff;
+padding:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.chatHead b{
+display:block;
+}
+
+.chatHead small{
+display:block;
+opacity:.9;
+}
+
+.close{
+border:0;
+background:#ffffff33;
+color:#fff;
+border-radius:50%;
+width:30px;
+height:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+.messages{
+height:270px;
+overflow:auto;
+padding:12px;
+background:#f7f8fc;
+}
+
+.msg{
+max-width:85%;
+padding:9px 11px;
+border-radius:12px;
+margin:7px 0;
+white-space:pre-wrap;
+font-size:14px;
+}
+
+.bot{
+background:#fff;
+border:1px solid #e5e7eb;
+}
+
+.user{
+background:#2563eb;
+color:#fff;
+margin-left:auto;
+}
+
+.quick{
+display:flex;
+gap:5px;
+flex-wrap:wrap;
+padding:8px;
+}
+
+.quick button{
+background:#fff;
+border:1px solid #ddd;
+border-radius:18px;
+padding:7px 9px;
+font-size:12px;
+cursor:pointer;
+}
+
+.chatInput{
+display:flex;
+gap:6px;
+padding:9px;
+border-top:1px solid #eee;
+}
+
+.chatInput input{
+flex:1;
+padding:10px;
+border:1px solid #ddd;
+border-radius:9px;
+min-width:0;
+}
+
+.chatInput button{
+border:0;
+background:#2563eb;
+color:#fff;
+border-radius:9px;
+padding:0 10px;
+font-weight:bold;
+cursor:pointer;
+}
+
+@media(max-width:650px){
+
+nav{
+display:none;
+}
+
+.hero{
+padding:55px 18px;
+}
+
+.robotBtn{
+width:88px;
+height:88px;
+}
+
+.robotSvg{
+width:75px;
+height:75px;
+}
+
+.chat{
+bottom:105px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- CABEÇALHO -->
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+
+<div class="mark">
+DH
+</div>
+
+<div>
+
+<b>Divulgação Henrique</b>
+
+<small>
+Seu anúncio, mais visibilidade.
+</small>
+
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="#anuncios">
+Anúncios
+</a>
+
+<a href="#como">
+Como funciona
+</a>
+
+<a href="#publicar">
+Publicar
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- INÍCIO -->
+
+<div class="hero">
+
+<h1>
+Divulgue para mais pessoas
+</h1>
+
+<p>
+Publique produtos, serviços e oportunidades
+no Divulgação Henrique de forma simples e rápida.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn white"
+href="#publicar">
+
+📢 Publicar meu anúncio
+
+</a>
+
+<a
+class="btn dark"
+href="#anuncios">
+
+🔎 Ver anúncios
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- CATEGORIAS -->
+
+<section>
+
+<div class="title">
+
+<h2>
+Categorias
+</h2>
+
+<p>
+Encontre anúncios por categoria.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="ico">
+💅
+</div>
+
+<b>
+Beleza
+</b>
+
+</div>
+
+
+<div class="card">
+
+<div class="ico">
+🛍️
+</div>
+
+<b>
+Produtos
+</b>
+
+</div>
+
+
+<div class="card">
+
+<div class="ico">
+🔧
+</div>
+
+<b>
+Serviços
+</b>
+
+</div>
+
+
+<div class="card">
+
+<div class="ico">
+🚗
+</div>
+
+<b>
+Veículos
+</b>
+
+</div>
+
+
+<div class="card">
+
+<div class="ico">
+💼
+</div>
+
+<b>
+Empregos
+</b>
+
+</div>
+
+
+<div class="card">
+
+<div class="ico">
+🏠
+</div>
+
+<b>
+Imóveis
+</b>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ANÚNCIOS -->
+
+<section id="anuncios">
+
+<div class="title">
+
+<h2>
+Anúncios em destaque
+</h2>
+
+<p>
+Confira algumas publicações.
+</p>
+
+</div>
+
+
+<div class="search">
+
+<input
+id="search"
+type="search"
+placeholder="🔎 Pesquisar anúncios..."
+oninput="buscar()">
+
+</div>
+
+
+<div class="ads">
+
+
+<div class="ad">
+
+<span class="tag">
+Beleza
+</span>
+
+<h3>
+Alongamento em fibra de vidro
+</h3>
+
+<p>
+Alongamento, esmaltação em gel,
+blindagem e banho em gel.
+</p>
+
+<div class="price">
+Consulte o valor
+</div>
+
+<a
+class="btn green"
+href="https://wa.me/5562982225188"
+target="_blank">
+
+Entrar em contato
+
+</a>
+
+</div>
+
+
+
+<div class="ad">
+
+<span class="tag">
+Serviços
+</span>
+
+<h3>
+Divulgue seu serviço
+</h3>
+
+<p>
+Coloque seu serviço em destaque
+e alcance novos clientes.
+</p>
+
+<div class="price">
+A partir de R$ 5
+</div>
+
+<a
+class="btn white"
+href="#publicar">
+
+Publicar
+
+</a>
+
+</div>
+
+
+
+<div class="ad">
+
+<span class="tag">
+Produtos
+</span>
+
+<h3>
+Venda seus produtos
+</h3>
+
+<p>
+Apresente seus produtos para
+pessoas interessadas.
+</p>
+
+<div class="price">
+Confira
+</div>
+
+<a
+class="btn white"
+href="#publicar">
+
+Anunciar
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- COMO FUNCIONA -->
+
+<section id="como">
+
+<div class="title">
+
+<h2>
+Como funciona?
+</h2>
+
+<p>
+Publicar é simples.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="num">
+1
+</div>
+
+<h3>
+Crie o anúncio
+</h3>
+
+<p>
+Informe título, categoria,
+descrição e contato.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="num">
+2
+</div>
+
+<h3>
+Faça o Pix
+</h3>
+
+<p>
+A publicação custa apenas
+R$ 5,00.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="num">
+3
+</div>
+
+<h3>
+Envie o comprovante
+</h3>
+
+<p>
+Envie o comprovante pelo WhatsApp.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="num">
+4
+</div>
+
+<h3>
+Publicação
+</h3>
+
+<p>
+Após a conferência, o anúncio
+poderá ser publicado.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- PUBLICAR -->
+
+<section id="publicar">
+
+<div class="title">
+
+<h2>
+📢 Publique seu anúncio
+</h2>
+
+<p>
+Preencha os dados e envie para análise.
+</p>
+
+</div>
+
+
+<div class="form">
+
+<form id="form">
+
+
+<div class="group">
+
+<label>
+Seu nome
+</label>
+
+<input
+id="nome"
+required
+placeholder="Digite seu nome">
+
+</div>
+
+
+
+<div class="group">
+
+<label>
+Título do anúncio
+</label>
+
+<input
+id="titulo"
+required
+placeholder="Ex.: Manicure profissional">
+
+</div>
+
+
+
+<div class="group">
+
+<label>
+Categoria
+</label>
+
+<select
+id="categoria"
+required>
+
+<option value="">
+Selecione
+</option>
+
+<option>
+Beleza
+</option>
+
+<option>
+Produtos
+</option>
+
+<option>
+Serviços
+</option>
+
+<option>
+Veículos
+</option>
+
+<option>
+Empregos
+</option>
+
+<option>
+Imóveis
+</option>
+
+<option>
+Outros
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="group">
+
+<label>
+Descrição
+</label>
+
+<textarea
+id="descricao"
+required
+placeholder="Descreva seu produto ou serviço..."></textarea>
+
+</div>
+
+
+
+<div class="group">
+
+<label>
+Seu WhatsApp
+</label>
+
+<input
+id="telefone"
+required
+placeholder="(62) 99999-9999">
+
+</div>
+
+
+
+<!-- PIX -->
+
+<div class="pix">
+
+<h3>
+💳 Pagamento via Pix
+</h3>
+
+<p>
+Valor da publicação:
+<b>
+R$ 5,00
+</b>
+</p>
+
+
+<div
+class="pixkey"
+id="pix">
+
+30ae9503-548c-446a-9211-8d9884639535
+
+</div>
+
+
+<button
+type="button"
+class="btn dark"
+onclick="copiarPix()">
+
+📋 Copiar chave Pix
+
+</button>
+
+
+<p
+style="margin-top:10px;font-size:13px">
+
+Depois de realizar o Pix,
+envie o comprovante junto
+com os dados do anúncio.
+
+</p>
+
+</div>
+
+
+
+<button
+class="btn green"
+style="width:100%">
+
+📲 Enviar anúncio pelo WhatsApp
+
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTATO -->
+
+<div class="contact">
+
+<h2>
+Fale com a Divulgação Henrique
+</h2>
+
+<p>
+Precisa de ajuda?
+Fale conosco pelo WhatsApp.
+</p>
+
+
+<div class="buttons">
+
+<a
+class="btn green"
+href="https://wa.me/5562984920692"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+© 2026 Divulgação Henrique —
+Publicidade e divulgação de produtos e serviços.
+
+</footer>
+
+
+
+<!-- =========================
+     ROBÔ ASSISTENTE
+========================= -->
 
 <div class="assistant">
 
-<div class="chat" id="chat">
+
+<div
+class="chat"
+id="chat">
+
 
 <div class="chatHead">
 
@@ -13,10 +1146,11 @@
 </b>
 
 <small>
-Olá! Posso ajudar você.
+Online • Posso ajudar você
 </small>
 
 </div>
+
 
 <button
 class="close"
@@ -28,9 +1162,12 @@ onclick="toggleChat()">
 
 </div>
 
+
+
 <div
 class="messages"
 id="messages">
+
 
 <div class="msg bot">
 
@@ -40,14 +1177,19 @@ Eu sou o assistente do
 Divulgação Henrique.
 
 Posso explicar como publicar,
-o valor, o Pix ou ajudar você
-a encontrar uma seção do site.
+o valor, o Pix ou o WhatsApp.
+
+Pode perguntar! 🤖
 
 </div>
 
+
 </div>
+
+
 
 <div class="quick">
+
 
 <button
 onclick="perguntar('Quanto custa publicar?')">
@@ -56,12 +1198,14 @@ onclick="perguntar('Quanto custa publicar?')">
 
 </button>
 
+
 <button
 onclick="perguntar('Como publicar?')">
 
 📢 Como publicar
 
 </button>
+
 
 <button
 onclick="perguntar('Qual é o Pix?')">
@@ -70,6 +1214,7 @@ onclick="perguntar('Qual é o Pix?')">
 
 </button>
 
+
 <button
 onclick="perguntar('WhatsApp')">
 
@@ -77,18 +1222,27 @@ onclick="perguntar('WhatsApp')">
 
 </button>
 
+
 </div>
 
+
+
 <div class="chatInput">
+
 
 <input
 id="chatText"
 placeholder="Digite sua pergunta..."
 onkeydown="if(event.key==='Enter') enviar()">
 
-<button onclick="enviar()">
+
+<button
+onclick="enviar()">
+
 Enviar
+
 </button>
+
 
 <button
 onclick="ouvir()"
@@ -98,33 +1252,155 @@ title="Falar">
 
 </button>
 
-</div>
 
 </div>
 
 
-<!--
-IMPORTANTE:
+</div>
 
-Coloque a imagem que você enviou
-na mesma pasta deste index.html
-com o nome:
 
-robo.png
 
--->
+<!-- ROBÔ DESENHADO NO PRÓPRIO HTML -->
 
-<img
-id="robot"
-class="robot"
-src="robo.png"
-alt="Assistente virtual Divulgação Henrique"
-onclick="toggleChat">
+<button
+class="robotBtn"
+onclick="toggleChat()"
+aria-label="Abrir assistente">
+
+
+<svg
+class="robotSvg"
+viewBox="0 0 100 100"
+xmlns="http://www.w3.org/2000/svg">
+
+
+<!-- antena -->
+
+<path
+d="M50 23V13"
+stroke="#2563eb"
+stroke-width="3"/>
+
+
+<circle
+cx="50"
+cy="9"
+r="5"
+fill="#2563eb"/>
+
+
+<!-- cabeça -->
+
+<rect
+x="16"
+y="25"
+width="68"
+height="49"
+rx="19"
+fill="#e8f8ff"
+stroke="#2563eb"
+stroke-width="3"/>
+
+
+<!-- ouvido esquerdo -->
+
+<rect
+x="10"
+y="39"
+width="9"
+height="20"
+rx="4"
+fill="#8bd7ff"/>
+
+
+<!-- ouvido direito -->
+
+<rect
+x="81"
+y="39"
+width="9"
+height="20"
+rx="4"
+fill="#8bd7ff"/>
+
+
+<!-- olho esquerdo -->
+
+<circle
+cx="37"
+cy="47"
+r="10"
+fill="#2563eb"/>
+
+
+<circle
+cx="34"
+cy="44"
+r="3"
+fill="#fff"/>
+
+
+<!-- olho direito -->
+
+<circle
+cx="63"
+cy="47"
+r="10"
+fill="#2563eb"/>
+
+
+<circle
+cx="60"
+cy="44"
+r="3"
+fill="#fff"/>
+
+
+<!-- boca -->
+
+<path
+d="M39 61 Q50 69 61 61"
+fill="none"
+stroke="#2563eb"
+stroke-width="3"
+stroke-linecap="round"/>
+
+
+<!-- corpo -->
+
+<rect
+x="27"
+y="74"
+width="46"
+height="18"
+rx="8"
+fill="#8bd7ff"
+stroke="#2563eb"
+stroke-width="2"/>
+
+
+<!-- botão -->
+
+<circle
+cx="50"
+cy="83"
+r="5"
+fill="#fff"/>
+
+
+</svg>
+
+</button>
+
 
 </div>
+
 
 
 <script>
+
+
+/* CONFIGURAÇÕES */
 
 const PIX =
 "30ae9503-548c-446a-9211-8d9884639535";
@@ -137,21 +1413,37 @@ const ADMIN_WA =
 
 function copiarPix(){
 
+if(
+navigator.clipboard &&
+navigator.clipboard.writeText
+){
+
 navigator.clipboard
 .writeText(PIX)
 .then(function(){
 
-alert("Chave Pix copiada!");
+alert(
+"Chave Pix copiada!"
+);
 
 })
 .catch(function(){
 
 alert(
-"Copie a chave Pix manualmente:\n\n"
+"Chave Pix:\n\n"
 + PIX
 );
 
 });
+
+}else{
+
+alert(
+"Chave Pix:\n\n"
++ PIX
+);
+
+}
 
 }
 
@@ -166,156 +1458,190 @@ document
 .value
 .toLowerCase();
 
+
 document
 .querySelectorAll(".ad")
 .forEach(function(ad){
 
+const texto =
+ad.innerText.toLowerCase();
+
+
+if(
+texto.includes(q)
+){
+
 ad.style.display =
-ad.innerText
-.toLowerCase()
-.includes(q)
-? "block"
-: "none";
+"block";
+
+}else{
+
+ad.style.display =
+"none";
+
+}
 
 });
 
 }
 
 
-/* ABRIR CHAT */
+/* ABRIR / FECHAR CHAT */
 
 function toggleChat(){
 
-document
-.getElementById("chat")
-.classList
-.toggle("open");
+const chat =
+document.getElementById("chat");
+
+
+chat.classList.toggle(
+"open"
+);
 
 }
 
 
-/* MENSAGEM */
+/* ADICIONAR MENSAGEM */
 
-function addMsg(text,who){
+function addMsg(
+texto,
+tipo
+){
 
-const box =
-document.getElementById("messages");
+const messages =
+document.getElementById(
+"messages"
+);
+
 
 const msg =
-document.createElement("div");
+document.createElement(
+"div"
+);
+
 
 msg.className =
-"msg " + who;
+"msg " + tipo;
+
 
 msg.textContent =
-text;
-
-box.appendChild(msg);
-
-box.scrollTop =
-box.scrollHeight;
-
-}
+texto;
 
 
-/* RESPOSTAS */
-
-function responder(q){
-
-const t =
-q.toLowerCase();
+messages.appendChild(
+msg
+);
 
 
-if(
-t.includes("preço") ||
-t.includes("valor") ||
-t.includes("custa") ||
-t.includes("5")
-){
-
-return "A publicação custa R$ 5,00. 💰";
+messages.scrollTop =
+messages.scrollHeight;
 
 }
 
 
-if(
-t.includes("pix") ||
-t.includes("pagar")
+/* RESPOSTAS DO ROBÔ */
+
+function responder(
+pergunta
 ){
 
-return (
+const texto =
+pergunta.toLowerCase();
+
+
+if(
+texto.includes("preço") ||
+texto.includes("preco") ||
+texto.includes("valor") ||
+texto.includes("custa") ||
+texto.includes("5")
+){
+
+return(
+"A publicação custa R$ 5,00. 💰"
+);
+
+}
+
+
+if(
+texto.includes("pix") ||
+texto.includes("pagar")
+){
+
+return(
 "A chave Pix é:\n\n"
-+ PIX
-+ "\n\nDepois, envie o comprovante junto com os dados do anúncio."
++
+PIX
++
+"\n\nDepois do pagamento, envie o comprovante."
 );
 
 }
 
 
 if(
-t.includes("publicar") ||
-t.includes("anúncio") ||
-t.includes("anuncio")
+texto.includes("publicar") ||
+texto.includes("anúncio") ||
+texto.includes("anuncio")
 ){
 
-return (
-"Para publicar, vá até a seção "
-+ "“Publique seu anúncio”, preencha "
-+ "os dados, faça o Pix de R$ 5,00 "
-+ "e envie pelo WhatsApp. 📢"
+return(
+"Para publicar seu anúncio, preencha o formulário, faça o Pix de R$ 5,00 e envie os dados pelo WhatsApp. 📢"
 );
 
 }
 
 
 if(
-t.includes("whatsapp") ||
-t.includes("contato")
+texto.includes("whatsapp") ||
+texto.includes("contato")
 ){
 
-return (
-"Você pode falar com a Divulgação "
-+ "Henrique pelo botão de WhatsApp "
-+ "do site. 📱"
+return(
+"Você pode entrar em contato pelo botão de WhatsApp no site. 📱"
 );
 
 }
 
 
 if(
-t.includes("beleza") ||
-t.includes("unha")
+texto.includes("unha") ||
+texto.includes("beleza")
 ){
 
-return (
-"Na categoria Beleza você pode "
-+ "divulgar serviços como unhas, "
-+ "esmaltação em gel, blindagem "
-+ "e banho em gel. 💅"
+return(
+"Na categoria Beleza você pode divulgar unhas, esmaltação em gel, blindagem, banho em gel e outros serviços. 💅"
 );
 
 }
 
 
 if(
-t.includes("oi") ||
-t.includes("olá") ||
-t.includes("ola")
+texto.includes("oi") ||
+texto.includes("olá") ||
+texto.includes("ola")
 ){
 
-return (
-"Olá! 😄 Como posso ajudar? "
-+ "Posso explicar o preço, Pix "
-+ "ou como publicar."
+return(
+"Olá! 😄 Sou o Assistente DH. Posso ajudar com preço, Pix, publicação ou WhatsApp."
 );
 
 }
 
 
-return (
+return(
 "Ainda estou aprendendo! 🤖\n\n"
-+ "Tente perguntar sobre preço, "
-+ "Pix, publicação ou WhatsApp."
++
+"Tente perguntar:\n"
++
+"• Quanto custa?\n"
++
+"• Qual é o Pix?\n"
++
+"• Como publicar?\n"
++
+"• WhatsApp"
 );
 
 }
@@ -323,23 +1649,39 @@ return (
 
 /* PERGUNTAR */
 
-function perguntar(q){
+function perguntar(
+pergunta
+){
 
-addMsg(q,"user");
+addMsg(
+pergunta,
+"user"
+);
 
-setTimeout(function(){
+
+setTimeout(
+function(){
 
 const resposta =
-responder(q);
+responder(
+pergunta
+);
+
 
 addMsg(
 resposta,
 "bot"
 );
 
-falar(resposta);
 
-},300);
+falar(
+resposta
+);
+
+
+},
+300
+);
 
 }
 
@@ -349,56 +1691,67 @@ falar(resposta);
 function enviar(){
 
 const input =
-document.getElementById("chatText");
+document.getElementById(
+"chatText"
+);
 
-const q =
+
+const pergunta =
 input.value.trim();
 
-if(!q){
+
+if(!pergunta){
+
 return;
-}
-
-input.value="";
-
-perguntar(q);
 
 }
 
 
-/* FALAR */
+input.value = "";
 
-function falar(text){
+
+perguntar(
+pergunta
+);
+
+}
+
+
+/* FALA */
+
+function falar(
+texto
+){
 
 if(
 !("speechSynthesis" in window)
 ){
+
 return;
+
 }
+
 
 speechSynthesis.cancel();
 
+
 const voz =
 new SpeechSynthesisUtterance(
-text.replace(/\n/g," ")
+texto.replace(/\n/g," ")
 );
 
-voz.lang="pt-BR";
-voz.rate=.95;
 
-const robot =
-document.getElementById("robot");
+voz.lang =
+"pt-BR";
 
-robot.classList.add("speaking");
 
-voz.onend=function(){
+voz.rate =
+0.95;
 
-robot.classList.remove(
-"speaking"
+
+speechSynthesis.speak(
+voz
 );
-
-};
-
-speechSynthesis.speak(voz);
 
 }
 
@@ -407,53 +1760,52 @@ speechSynthesis.speak(voz);
 
 function ouvir(){
 
-const SR =
+const SpeechRecognition =
 window.SpeechRecognition ||
 window.webkitSpeechRecognition;
 
-if(!SR){
+
+if(!SpeechRecognition){
 
 alert(
-"Seu navegador não oferece "
-+ "reconhecimento de voz. "
-+ "Você pode digitar."
+"Seu navegador não possui reconhecimento de voz. Digite sua pergunta."
 );
 
 return;
 
 }
 
+
 const reconhecimento =
-new SR();
+new SpeechRecognition();
+
 
 reconhecimento.lang =
 "pt-BR";
 
+
 reconhecimento.interimResults =
 false;
 
+
 reconhecimento.maxAlternatives =
 1;
-
-const robot =
-document.getElementById("robot");
-
-robot.classList.add("speaking");
-
-reconhecimento.start();
 
 
 reconhecimento.onresult =
 function(event){
 
-robot.classList.remove(
-"speaking"
-);
+const texto =
+event
+.results[0][0]
+.transcript;
 
-document.getElementById(
-"chatText"
-).value =
-event.results[0][0].transcript;
+
+document
+.getElementById("chatText")
+.value =
+texto;
+
 
 enviar();
 
@@ -463,21 +1815,14 @@ enviar();
 reconhecimento.onerror =
 function(){
 
-robot.classList.remove(
-"speaking"
+alert(
+"Não consegui ouvir. Tente novamente."
 );
 
 };
 
 
-reconhecimento.onend =
-function(){
-
-robot.classList.remove(
-"speaking"
-);
-
-};
+reconhecimento.start();
 
 }
 
@@ -494,50 +1839,56 @@ event.preventDefault();
 
 
 const nome =
-document.getElementById(
-"nome"
-).value;
+document
+.getElementById("nome")
+.value;
 
 
 const titulo =
-document.getElementById(
-"titulo"
-).value;
+document
+.getElementById("titulo")
+.value;
 
 
 const categoria =
-document.getElementById(
-"categoria"
-).value;
+document
+.getElementById("categoria")
+.value;
 
 
 const descricao =
-document.getElementById(
-"descricao"
-).value;
+document
+.getElementById("descricao")
+.value;
 
 
 const telefone =
-document.getElementById(
-"telefone"
-).value;
+document
+.getElementById("telefone")
+.value;
 
 
 const mensagem =
+
 `📢 NOVO ANÚNCIO - DIVULGAÇÃO HENRIQUE
 
-👤 Nome: ${nome}
+👤 Nome:
+${nome}
 
-📌 Título: ${titulo}
+📌 Título:
+${titulo}
 
-📂 Categoria: ${categoria}
+📂 Categoria:
+${categoria}
 
 📝 Descrição:
 ${descricao}
 
-📱 WhatsApp: ${telefone}
+📱 WhatsApp:
+${telefone}
 
-💰 Publicação: R$ 5,00
+💰 Publicação:
+R$ 5,00
 
 💳 Pix:
 ${PIX}
@@ -545,11 +1896,20 @@ ${PIX}
 📎 Vou enviar o comprovante do Pix nesta conversa.`;
 
 
-window.open(
+const url =
 "https://wa.me/"
-+ ADMIN_WA
-+ "?text="
-+ encodeURIComponent(mensagem),
++
+ADMIN_WA
++
+"?text="
++
+encodeURIComponent(
+mensagem
+);
+
+
+window.open(
+url,
 "_blank"
 );
 
