@@ -6,631 +6,739 @@
 
 <title>Divulgação Henrique | Anúncios e Divulgações</title>
 
-<meta name="description" content="Divulgação Henrique - Divulgue seu negócio, produto, serviço ou oferta por apenas R$ 5,00.">
+<meta name="description" content="Divulgação Henrique - Publique seu negócio, produto, serviço ou oferta por apenas R$ 5,00.">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #fff5fb;
-    color: #333;
+body{
+    background:#fff5fb;
+    color:#333;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #d81b60, #8e24aa);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#d81b60,#8e24aa);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
 }
 
-header h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
+header h1{
+    font-size:34px;
+    margin-bottom:10px;
 }
 
-header p {
-    font-size: 18px;
+header p{
+    font-size:18px;
 }
 
-/* MENU */
-nav {
-    background: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+nav{
+    background:white;
+    padding:14px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a {
-    color: #8e24aa;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 8px;
+nav a{
+    color:#8e24aa;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px 8px;
+    display:inline-block;
 }
 
-nav a:hover {
-    color: #d81b60;
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:25px 15px;
 }
 
-/* GERAL */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 25px 15px;
+.hero{
+    text-align:center;
+    padding:45px 20px;
 }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 45px 20px;
+.hero h2{
+    color:#d81b60;
+    font-size:30px;
+    margin-bottom:15px;
 }
 
-.hero h2 {
-    color: #d81b60;
-    font-size: 30px;
-    margin-bottom: 15px;
+.hero p{
+    font-size:18px;
+    line-height:1.6;
 }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
+.btn{
+    display:inline-block;
+    margin-top:18px;
+    background:#25D366;
+    color:white;
+    padding:14px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
 
-/* BOTÕES */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+.btn-purple{
+    background:#8e24aa;
 }
 
-.btn:hover {
-    transform: scale(1.03);
+.btn-red{
+    background:#d81b60;
 }
 
-.btn-pix {
-    background: #008f5a;
+.btn-dark{
+    background:#4a148c;
 }
 
-/* TÍTULOS */
-.section-title {
-    text-align: center;
-    color: #8e24aa;
-    font-size: 28px;
-    margin: 35px 0 20px;
+.section-title{
+    text-align:center;
+    color:#8e24aa;
+    font-size:28px;
+    margin:35px 0 20px;
 }
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+.cards,
+.anuncios-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.card,
+.anuncio-card{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
-.card h3 {
-    color: #d81b60;
-    margin-bottom: 10px;
+.card h3{
+    color:#d81b60;
+    margin-bottom:10px;
 }
 
-.card p {
-    line-height: 1.6;
+.publicar{
+    background:linear-gradient(135deg,#fff,#fff0f8);
+    border:2px solid #d81b60;
+    border-radius:25px;
+    padding:30px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
-/* PUBLICAR */
-.publicar {
-    background: linear-gradient(135deg, #ffffff, #fff0f8);
-    border: 2px solid #d81b60;
-    border-radius: 25px;
-    padding: 30px 20px;
-    margin-top: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+.publicar h2{
+    text-align:center;
+    color:#d81b60;
 }
 
-.publicar h2 {
-    text-align: center;
-    color: #d81b60;
-    margin-bottom: 10px;
+.preco{
+    text-align:center;
+    font-size:34px;
+    font-weight:bold;
+    color:#8e24aa;
+    margin:15px 0;
 }
 
-.preco {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    color: #8e24aa;
-    margin: 15px 0;
+.formulario{
+    max-width:650px;
+    margin:auto;
 }
 
-.publicar .info {
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.formulario label{
+    display:block;
+    margin:15px 0 6px;
+    font-weight:bold;
+    color:#8e24aa;
 }
 
-.formulario {
-    max-width: 600px;
-    margin: auto;
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    background:white;
 }
 
-.formulario label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #8e24aa;
+textarea{
+    min-height:120px;
+    resize:vertical;
 }
 
-.formulario input,
-.formulario textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
+.check{
+    display:flex!important;
+    align-items:center;
+    gap:10px;
 }
 
-.formulario textarea {
-    min-height: 120px;
-    resize: vertical;
+.check input{
+    width:auto;
 }
 
-.formulario .btn {
-    width: 100%;
+.preview{
+    margin-top:12px;
+    text-align:center;
 }
 
-/* PIX */
-.pix-box {
-    display: none;
-    background: #f1fff9;
-    border: 2px solid #00a86b;
-    border-radius: 18px;
-    padding: 20px;
-    margin-top: 25px;
-    text-align: center;
+.preview img{
+    max-width:100%;
+    max-height:220px;
+    border-radius:14px;
+    display:none;
+    margin:auto;
 }
 
-.pix-box h3 {
-    color: #008f5a;
-    margin-bottom: 10px;
+.pix-box{
+    display:none;
+    background:#f1fff9;
+    border:2px solid #00a86b;
+    border-radius:18px;
+    padding:20px;
+    margin-top:25px;
+    text-align:center;
 }
 
-.pix-valor {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 10px;
-    color: #008f5a;
+.pix-box h3{
+    color:#008f5a;
 }
 
-.aviso {
-    font-size: 14px;
-    color: #555;
-    margin-top: 12px;
-    line-height: 1.5;
+.pix-valor{
+    font-size:30px;
+    font-weight:bold;
+    color:#008f5a;
+    margin:10px;
 }
 
-/* UNHAS */
-.unhas {
-    background: linear-gradient(135deg, #ffe0ef, #f3d8ff);
-    border-radius: 25px;
-    padding: 30px 20px;
-    margin-top: 25px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+.aviso{
+    font-size:13px;
+    color:#666;
+    line-height:1.5;
+    margin-top:10px;
 }
 
-.unhas h2 {
-    text-align: center;
-    color: #c2185b;
-    font-size: 30px;
-    margin-bottom: 10px;
+.filtro{
+    background:white;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 3px 12px rgba(0,0,0,.1);
+    margin-bottom:20px;
 }
 
-.unhas .descricao {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 25px;
+.anuncio-card{
+    position:relative;
 }
 
-.servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
+.anuncio-card.destaque{
+    border:3px solid #f5b400;
+}
+
+.selo{
+    display:inline-block;
+    background:#f5b400;
+    color:white;
+    padding:6px 10px;
+    border-radius:12px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.anuncio-card img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+.anuncio-card h3{
+    color:#8e24aa;
+    margin-bottom:8px;
+}
+
+.meta{
+    font-size:13px;
+    color:#777;
+    margin:8px 0;
+}
+
+.anuncio-card p{
+    line-height:1.5;
+}
+
+.acoes-anuncio{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.acoes-anuncio .btn{
+    flex:1;
+    text-align:center;
+    min-width:110px;
+    font-size:13px;
+    padding:11px;
+}
+
+.vazio{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    background:white;
+    border-radius:18px;
+    grid-column:1/-1;
+}
+
+.sobre{
+    background:white;
+    padding:30px 20px;
+    border-radius:20px;
+    line-height:1.7;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.contato{
+    text-align:center;
+    padding:35px 15px;
+}
+
+footer{
+    background:#4a148c;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+/* =========================
+   PAINEL ADMINISTRADOR
+========================= */
+
+.admin{
+    background:#f7f3ff;
+    border:2px solid #8e24aa;
+    border-radius:25px;
+    padding:25px 20px;
+    margin-top:30px;
+}
+
+.admin h2{
+    color:#8e24aa;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.admin-login{
+    max-width:400px;
+    margin:auto;
+}
+
+.admin-painel{
+    display:none;
+}
+
+.admin-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+    margin:20px 0;
+}
+
+.stat{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.stat strong{
+    display:block;
+    font-size:26px;
+    color:#d81b60;
+    margin-bottom:5px;
+}
+
+.admin-anuncio{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    margin-top:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.admin-anuncio h3{
+    color:#8e24aa;
+    margin-bottom:8px;
+}
+
+.admin-acoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+}
+
+.admin-acoes button{
+    border:0;
+    border-radius:20px;
+    padding:9px 13px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.aprovar{
+    background:#25D366;
+    color:white;
+}
+
+.destacar{
+    background:#f5b400;
+    color:white;
+}
+
+.editar{
+    background:#8e24aa;
+    color:white;
+}
+
+.excluir{
+    background:#d81b60;
+    color:white;
+}
+
+.sair{
+    background:#555;
+    color:white;
+}
+
+/* =========================
+   MASCOTE ROBÔ
+========================= */
+
+#assistente{
+    position:fixed;
+    left:15px;
+    bottom:85px;
+    width:110px;
+    height:175px;
+    z-index:2000;
+    pointer-events:none;
+    animation:andar 14s ease-in-out infinite alternate;
+}
+
+.robo-fala{
+    position:absolute;
+    bottom:155px;
+    left:0;
+    width:240px;
+    background:white;
+    color:#4a148c;
+    padding:12px 15px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
+    font-size:14px;
+    line-height:1.4;
+    font-weight:bold;
+    opacity:0;
+    animation:falar 6s ease-in-out infinite;
+}
+
+.robo-fala:after{
+    content:"";
+    position:absolute;
+    left:25px;
+    bottom:-10px;
+    border-width:10px 10px 0 0;
+    border-style:solid;
+    border-color:white transparent transparent transparent;
+}
+
+.robo{
+    position:absolute;
+    bottom:0;
+    left:22px;
+    width:65px;
+    height:90px;
+    background:linear-gradient(145deg,#eee,#b8b8d9);
+    border:3px solid #4a148c;
+    border-radius:18px;
+    box-shadow:0 5px 12px rgba(0,0,0,.25);
+}
+
+.robo-cabeca{
+    position:absolute;
+    width:72px;
+    height:58px;
+    left:-7px;
+    top:-53px;
+    background:linear-gradient(145deg,#fff,#d6d6ec);
+    border:3px solid #4a148c;
+    border-radius:18px;
+}
+
+.antena{
+    position:absolute;
+    width:5px;
+    height:15px;
+    background:#4a148c;
+    left:31px;
+    top:-18px;
+}
+
+.antena:after{
+    content:"";
+    position:absolute;
+    width:11px;
+    height:11px;
+    background:#d81b60;
+    border-radius:50%;
+    left:-3px;
+    top:-8px;
+    animation:piscar 1s infinite;
+}
+
+.olho{
+    position:absolute;
+    width:13px;
+    height:16px;
+    background:#4a148c;
+    border-radius:50%;
+    top:19px;
+    animation:piscar 4s infinite;
+}
+
+.olho-esq{
+    left:15px;
+}
+
+.olho-dir{
+    right:15px;
+}
+
+.boca{
+    position:absolute;
+    width:25px;
+    height:10px;
+    border-bottom:3px solid #d81b60;
+    border-radius:50%;
+    left:21px;
+    bottom:11px;
+}
+
+.tela{
+    position:absolute;
+    width:38px;
+    height:25px;
+    left:11px;
+    top:20px;
+    background:#4a148c;
+    border-radius:8px;
+    color:white;
+    text-align:center;
+    padding-top:5px;
+    font-size:12px;
+}
+
+.braco{
+    position:absolute;
+    width:13px;
+    height:48px;
+    background:#c8c8df;
+    border:3px solid #4a148c;
+    border-radius:12px;
+    top:8px;
+}
+
+.braco-esq{
+    left:-17px;
+    transform:rotate(20deg);
+}
+
+.braco-dir{
+    right:-17px;
+    transform:rotate(-25deg);
+    transform-origin:top center;
+    animation:acenar 1s infinite;
+}
+
+.perna{
+    position:absolute;
+    width:14px;
+    height:35px;
+    background:#c8c8df;
+    border:3px solid #4a148c;
+    border-radius:10px;
+    bottom:-30px;
+}
+
+.perna-esq{
+    left:9px;
+    animation:pernaEsq .7s infinite alternate;
+}
+
+.perna-dir{
+    right:9px;
+    animation:pernaDir .7s infinite alternate;
+}
+
+.assistente-btn{
+    pointer-events:auto;
+    position:absolute;
+    bottom:-58px;
+    left:0;
+    border:0;
+    background:#8e24aa;
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.assistente-voz{
+    pointer-events:auto;
+    position:absolute;
+    bottom:-92px;
+    left:-8px;
+    border:0;
+    background:#25D366;
+    color:white;
+    padding:8px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-.servico {
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #8e24aa;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
+/* =========================
+   ANIMAÇÕES
+========================= */
 
-.servico span {
-    display: block;
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.unhas .btn {
-    display: block;
-    width: fit-content;
-    margin: 25px auto 0;
-}
-
-/* SOBRE */
-.sobre {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 20px;
-    margin-top: 30px;
-    line-height: 1.7;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-/* CONTATO */
-.contato {
-    text-align: center;
-    padding: 35px 15px;
-}
-
-/* FOOTER */
-footer {
-    background: #4a148c;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    width: 62px;
-    height: 62px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 1999;
-}
-
-/* =====================================================
-   ASSISTENTE ROBÔ
-===================================================== */
-
-#assistente {
-    position: fixed;
-    left: 15px;
-    bottom: 85px;
-    width: 105px;
-    height: 160px;
-    z-index: 2000;
-    pointer-events: none;
-    animation: andar 12s ease-in-out infinite alternate;
-}
-
-/* BALÃO */
-.robo-fala {
-    position: absolute;
-    bottom: 145px;
-    left: 0;
-    width: 230px;
-    background: white;
-    color: #4a148c;
-    padding: 12px 15px;
-    border-radius: 18px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.22);
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: falar 5s ease-in-out infinite;
-}
-
-.robo-fala::after {
-    content: "";
-    position: absolute;
-    left: 25px;
-    bottom: -10px;
-    border-width: 10px 10px 0 0;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-}
-
-/* CORPO */
-.robo {
-    position: absolute;
-    bottom: 0;
-    left: 22px;
-    width: 65px;
-    height: 90px;
-    background: linear-gradient(145deg, #eeeeff, #b8b8d9);
-    border: 3px solid #4a148c;
-    border-radius: 18px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
-}
-
-/* CABEÇA */
-.robo-cabeca {
-    position: absolute;
-    width: 72px;
-    height: 58px;
-    left: -7px;
-    top: -53px;
-    background: linear-gradient(145deg, #ffffff, #d6d6ec);
-    border: 3px solid #4a148c;
-    border-radius: 18px;
-}
-
-/* ANTENA */
-.antena {
-    position: absolute;
-    width: 5px;
-    height: 15px;
-    background: #4a148c;
-    left: 31px;
-    top: -18px;
-}
-
-.antena::after {
-    content: "";
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    background: #d81b60;
-    border-radius: 50%;
-    left: -3px;
-    top: -8px;
-    animation: piscar 1s infinite;
-}
-
-/* OLHOS */
-.olho {
-    position: absolute;
-    width: 13px;
-    height: 16px;
-    background: #4a148c;
-    border-radius: 50%;
-    top: 19px;
-    animation: piscar 4s infinite;
-}
-
-.olho-esq {
-    left: 15px;
-}
-
-.olho-dir {
-    right: 15px;
-}
-
-/* BOCA */
-.boca {
-    position: absolute;
-    width: 25px;
-    height: 10px;
-    border-bottom: 3px solid #d81b60;
-    border-radius: 50%;
-    left: 21px;
-    bottom: 11px;
-}
-
-/* TELA DO PEITO */
-.tela {
-    position: absolute;
-    width: 38px;
-    height: 25px;
-    left: 11px;
-    top: 20px;
-    background: #4a148c;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 12px;
-}
-
-/* BRAÇOS */
-.braco {
-    position: absolute;
-    width: 13px;
-    height: 48px;
-    background: #c8c8df;
-    border: 3px solid #4a148c;
-    border-radius: 12px;
-    top: 8px;
-}
-
-.braco-esq {
-    left: -17px;
-    transform: rotate(20deg);
-}
-
-.braco-dir {
-    right: -17px;
-    transform: rotate(-25deg);
-    transform-origin: top center;
-    animation: acenar 1s ease-in-out infinite;
-}
-
-/* PERNAS */
-.perna {
-    position: absolute;
-    width: 14px;
-    height: 35px;
-    background: #c8c8df;
-    border: 3px solid #4a148c;
-    border-radius: 10px;
-    bottom: -30px;
-}
-
-.perna-esq {
-    left: 9px;
-    animation: pernaEsq 0.7s infinite alternate;
-}
-
-.perna-dir {
-    right: 9px;
-    animation: pernaDir 0.7s infinite alternate;
-}
-
-/* BOTÃO DA ASSISTENTE */
-.assistente-btn {
-    pointer-events: auto;
-    position: absolute;
-    bottom: -50px;
-    left: 3px;
-    border: none;
-    background: #8e24aa;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-}
-
-/* ANIMAÇÕES */
-@keyframes andar {
-    0% {
-        left: 15px;
+@keyframes andar{
+    0%{
+        left:15px;
     }
 
-    45% {
-        left: calc(100% - 125px);
+    45%{
+        left:calc(100% - 125px);
     }
 
-    55% {
-        left: calc(100% - 125px);
+    55%{
+        left:calc(100% - 125px);
     }
 
-    100% {
-        left: 15px;
-    }
-}
-
-@keyframes falar {
-    0%, 15% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    25%, 75% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    85%, 100% {
-        opacity: 0;
-        transform: translateY(-5px);
+    100%{
+        left:15px;
     }
 }
 
-@keyframes acenar {
-    0% {
-        transform: rotate(-25deg);
+@keyframes falar{
+
+    0%,15%{
+        opacity:0;
+        transform:translateY(10px);
     }
 
-    50% {
-        transform: rotate(-70deg);
+    25%,75%{
+        opacity:1;
+        transform:translateY(0);
     }
 
-    100% {
-        transform: rotate(-25deg);
-    }
-}
-
-@keyframes pernaEsq {
-    from {
-        transform: rotate(12deg);
-    }
-
-    to {
-        transform: rotate(-12deg);
+    85%,100%{
+        opacity:0;
     }
 }
 
-@keyframes pernaDir {
-    from {
-        transform: rotate(-12deg);
+@keyframes acenar{
+
+    0%{
+        transform:rotate(-25deg);
     }
 
-    to {
-        transform: rotate(12deg);
-    }
-}
-
-@keyframes piscar {
-    0%, 90%, 100% {
-        opacity: 1;
+    50%{
+        transform:rotate(-70deg);
     }
 
-    95% {
-        opacity: 0.1;
+    100%{
+        transform:rotate(-25deg);
     }
 }
 
-/* CELULAR */
-@media (max-width: 600px) {
+@keyframes pernaEsq{
 
-    header h1 {
-        font-size: 28px;
+    from{
+        transform:rotate(12deg);
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    to{
+        transform:rotate(-12deg);
+    }
+}
+
+@keyframes pernaDir{
+
+    from{
+        transform:rotate(-12deg);
     }
 
-    .hero h2 {
-        font-size: 25px;
+    to{
+        transform:rotate(12deg);
+    }
+}
+
+@keyframes piscar{
+
+    0%,90%,100%{
+        opacity:1;
     }
 
-    #assistente {
-        transform: scale(0.82);
-        transform-origin: bottom left;
+    95%{
+        opacity:.1;
+    }
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:28px;
     }
 
-    .robo-fala {
-        width: 190px;
-        font-size: 13px;
+    .hero h2{
+        font-size:25px;
+    }
+
+    nav a{
+        margin:5px;
+    }
+
+    #assistente{
+        transform:scale(.82);
+        transform-origin:bottom left;
+    }
+
+    .robo-fala{
+        width:195px;
+        font-size:13px;
     }
 }
 </style>
@@ -639,97 +747,175 @@ footer {
 <body>
 
 <header>
+
     <h1>📢 Divulgação Henrique</h1>
-    <p>Divulgue. Encontre. Conecte-se.</p>
+
+    <p>
+        Divulgue. Encontre. Conecte-se.
+    </p>
+
 </header>
 
 <nav>
+
     <a href="#inicio">Início</a>
-    <a href="#divulgacoes">Divulgações</a>
-    <a href="#publicar">💰 Publicar</a>
-    <a href="#unhas">💅 Unhas</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#contato">Contato</a>
+
+    <a href="#divulgacoes">
+        🔎 Anúncios
+    </a>
+
+    <a href="#publicar">
+        💰 Publicar
+    </a>
+
+    <a href="#unhas">
+        💅 Unhas
+    </a>
+
+    <a href="#sobre">
+        Sobre
+    </a>
+
+    <a href="#admin">
+        🔐 Admin
+    </a>
+
+    <a href="#contato">
+        Contato
+    </a>
+
 </nav>
 
-<!-- INÍCIO -->
 <section class="hero" id="inicio">
 
     <div class="container">
 
-        <h2>Bem-vindo à Divulgação Henrique!</h2>
+        <h2>
+            Seu anúncio pode aparecer aqui! 🚀
+        </h2>
 
         <p>
-            Encontre serviços, ofertas e divulgações em um só lugar.
-            Agora você também pode publicar seu próprio anúncio.
+
+            Divulgue seu negócio, produto,
+            serviço ou oferta.
+
+            Publique por apenas
+            <strong>R$ 5,00</strong>.
+
         </p>
 
-        <a class="btn"
-           href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
-           target="_blank">
-            📲 Falar pelo WhatsApp
+        <a
+            class="btn btn-purple"
+            href="#publicar"
+        >
+
+            📢 Quero anunciar
+
         </a>
 
     </div>
 
 </section>
 
-<!-- DIVULGAÇÕES -->
-<section id="divulgacoes" class="container">
+<section
+    id="divulgacoes"
+    class="container"
+>
 
-    <h2 class="section-title">📢 Divulgações</h2>
+    <h2 class="section-title">
 
-    <div class="cards">
+        🔎 Anúncios publicados
 
-        <div class="card">
+    </h2>
 
-            <h3>📣 Divulgue seu negócio</h3>
+    <div class="filtro">
 
-            <p>
-                Quer divulgar seu serviço ou produto?
-                Publique seu anúncio no Divulgação Henrique.
-            </p>
+        <input
+            id="busca"
+            type="search"
+            placeholder="🔎 Buscar anúncio..."
+            oninput="renderAnuncios()"
+        >
 
-        </div>
+        <br><br>
 
-        <div class="card">
+        <select
+            id="categoriaFiltro"
+            onchange="renderAnuncios()"
+        >
 
-            <h3>💰 Ofertas</h3>
+            <option value="">
+                Todas as categorias
+            </option>
 
-            <p>
-                Confira divulgações, serviços e oportunidades.
-            </p>
+            <option>
+                Beleza
+            </option>
 
-        </div>
+            <option>
+                Serviços
+            </option>
 
-        <div class="card">
+            <option>
+                Produtos
+            </option>
 
-            <h3>📱 Atendimento</h3>
+            <option>
+                Ofertas
+            </option>
 
-            <p>
-                Fale diretamente com Henrique pelo WhatsApp.
-            </p>
+            <option>
+                Empregos
+            </option>
 
-        </div>
+            <option>
+                Outros
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <input
+            id="cidadeFiltro"
+            type="search"
+            placeholder="📍 Buscar por cidade..."
+            oninput="renderAnuncios()"
+        >
 
     </div>
 
+    <div
+        id="listaAnuncios"
+        class="anuncios-grid"
+    ></div>
+
 </section>
 
-<!-- PUBLICAÇÃO -->
-<section id="publicar" class="container">
+<section
+    id="publicar"
+    class="container"
+>
 
     <div class="publicar">
 
-        <h2>📢 Publique seu anúncio</h2>
+        <h2>
+            📢 Publique seu anúncio
+        </h2>
 
         <div class="preco">
             R$ 5,00
         </div>
 
-        <p class="info">
-            Divulgue seu negócio, produto, serviço ou oferta.
-            Preencha os dados abaixo e continue para o pagamento.
+        <p
+            style="text-align:center;line-height:1.6"
+        >
+
+            Divulgue seu negócio,
+            produto, serviço ou oferta.
+
+            Preencha os dados abaixo.
+
         </p>
 
         <div class="formulario">
@@ -739,8 +925,8 @@ footer {
             </label>
 
             <input
-                type="text"
                 id="nome"
+                type="text"
                 placeholder="Digite seu nome"
             >
 
@@ -749,9 +935,51 @@ footer {
             </label>
 
             <input
-                type="text"
                 id="titulo"
+                type="text"
                 placeholder="Ex.: Promoção de unhas"
+            >
+
+            <label for="categoriaAnuncio">
+                Categoria
+            </label>
+
+            <select id="categoriaAnuncio">
+
+                <option>
+                    Beleza
+                </option>
+
+                <option>
+                    Serviços
+                </option>
+
+                <option>
+                    Produtos
+                </option>
+
+                <option>
+                    Ofertas
+                </option>
+
+                <option>
+                    Empregos
+                </option>
+
+                <option>
+                    Outros
+                </option>
+
+            </select>
+
+            <label for="cidadeAnuncio">
+                Cidade/UF
+            </label>
+
+            <input
+                id="cidadeAnuncio"
+                type="text"
+                placeholder="Ex.: Goiânia - GO"
             >
 
             <label for="descricao">
@@ -760,30 +988,67 @@ footer {
 
             <textarea
                 id="descricao"
-                placeholder="Descreva seu produto, serviço ou oferta">
-            </textarea>
+                placeholder="Descreva seu produto, serviço ou oferta"
+            ></textarea>
 
             <label for="telefone">
                 WhatsApp para contato
             </label>
 
             <input
-                type="tel"
                 id="telefone"
+                type="tel"
                 placeholder="Ex.: (62) 99999-9999"
             >
 
-            <button
-                class="btn btn-pix"
-                onclick="gerarPagamento()">
+            <label for="foto">
+                📸 Foto do anúncio
+            </label>
 
-                💚 Continuar para pagamento — R$ 5,00
+            <input
+                id="foto"
+                type="file"
+                accept="image/*"
+                onchange="previewFoto(event)"
+            >
+
+            <div class="preview">
+
+                <img
+                    id="previewImagem"
+                    alt="Prévia da foto"
+                >
+
+            </div>
+
+            <label class="check">
+
+                <input
+                    id="destaque"
+                    type="checkbox"
+                >
+
+                ⭐ Quero anúncio em destaque
+                (+ R$ 5,00)
+
+            </label>
+
+            <button
+                class="btn btn-purple"
+                style="width:100%"
+                onclick="prepararPagamento()"
+            >
+
+                💰 Continuar para pagamento
 
             </button>
 
         </div>
 
-        <div class="pix-box" id="pixBox">
+        <div
+            class="pix-box"
+            id="pixBox"
+        >
 
             <h3>
                 💚 Pagamento via Pix
@@ -793,30 +1058,41 @@ footer {
                 Valor da publicação:
             </p>
 
-            <div class="pix-valor">
+            <div
+                class="pix-valor"
+                id="valorPix"
+            >
                 R$ 5,00
             </div>
 
             <p>
-                Depois de realizar o Pix,
-                envie o comprovante pelo WhatsApp
-                para confirmar a publicação.
+
+                Faça o Pix e depois envie
+                os dados e o comprovante
+                pelo WhatsApp.
+
             </p>
 
             <a
                 id="whatsappPagamento"
                 class="btn"
                 href="#"
-                target="_blank">
+                target="_blank"
+            >
 
-                📲 Enviar comprovante pelo WhatsApp
+                📲 Enviar dados e comprovante
 
             </a>
 
             <p class="aviso">
-                ⚠️ A publicação será liberada somente
-                após a confirmação do pagamento e análise
-                do anúncio.
+
+                ⚠️ O anúncio ficará aguardando
+                aprovação.
+
+                A publicação será liberada
+                após confirmação do pagamento
+                e análise.
+
             </p>
 
         </div>
@@ -825,58 +1101,104 @@ footer {
 
 </section>
 
-<!-- UNHAS -->
-<section id="unhas" class="container">
+<section
+    id="unhas"
+    class="container"
+>
 
-    <div class="unhas">
+    <div class="publicar">
 
-        <h2>
+        <h2
+            style="text-align:center;color:#c2185b"
+        >
+
             💅 Divulgação de Unhas
+
         </h2>
 
-        <p class="descricao">
-            Realce sua beleza com unhas lindas e bem cuidadas! ✨
+        <p
+            style="text-align:center;font-size:18px;margin:12px 0 25px"
+        >
+
+            Realce sua beleza com unhas
+            lindas e bem cuidadas! ✨
+
         </p>
 
-        <div class="servicos">
+        <div class="cards">
 
-            <div class="servico">
-                <span>💅</span>
-                Alongamento em fibra de vidro
+            <div class="card">
+
+                <h3>💅</h3>
+
+                <p>
+                    <strong>
+                        Alongamento em fibra de vidro
+                    </strong>
+                </p>
+
             </div>
 
-            <div class="servico">
-                <span>💖</span>
-                Esmaltação em gel
+            <div class="card">
+
+                <h3>💖</h3>
+
+                <p>
+                    <strong>
+                        Esmaltação em gel
+                    </strong>
+                </p>
+
             </div>
 
-            <div class="servico">
-                <span>✨</span>
-                Blindagem
+            <div class="card">
+
+                <h3>✨</h3>
+
+                <p>
+                    <strong>
+                        Blindagem
+                    </strong>
+                </p>
+
             </div>
 
-            <div class="servico">
-                <span>🌸</span>
-                Banho em gel
+            <div class="card">
+
+                <h3>🌸</h3>
+
+                <p>
+                    <strong>
+                        Banho em gel
+                    </strong>
+                </p>
+
             </div>
 
         </div>
 
-        <a
-            class="btn"
-            href="https://wa.me/5562982225188?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20serviços%20de%20unhas."
-            target="_blank">
+        <div style="text-align:center">
 
-            📲 Agendar pelo WhatsApp
+            <a
+                class="btn"
+                href="https://wa.me/5562982225188?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20serviços%20de%20unhas."
+                target="_blank"
+            >
 
-        </a>
+                📲 Agendar pelo WhatsApp
+
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- SOBRE -->
-<section id="sobre" class="container">
+<section
+    id="sobre"
+    class="container"
+>
 
     <h2 class="section-title">
         ℹ️ Sobre
@@ -885,24 +1207,158 @@ footer {
     <div class="sobre">
 
         <p>
-            <strong>Divulgação Henrique</strong>
-            é uma página criada para divulgar serviços,
-            produtos, ofertas e oportunidades.
+
+            <strong>
+                Divulgação Henrique
+            </strong>
+
+            é uma página criada para conectar
+            pessoas a negócios, serviços,
+            produtos e ofertas.
+
         </p>
 
         <br>
 
         <p>
-            Aqui você pode encontrar diferentes divulgações
-            e entrar diretamente em contato pelo WhatsApp.
+
+            Nosso objetivo é facilitar a divulgação
+            e ajudar pequenos negócios a encontrar
+            novos clientes.
+
         </p>
 
     </div>
 
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="contato">
+<section
+    id="admin"
+    class="container"
+>
+
+    <div class="admin">
+
+        <h2>
+            🔐 Painel do Administrador
+        </h2>
+
+        <p
+            style="text-align:center;margin-bottom:20px"
+        >
+
+            Área exclusiva para administrar
+            os anúncios.
+
+        </p>
+
+        <div
+            class="admin-login"
+            id="adminLogin"
+        >
+
+            <label>
+                Senha do administrador
+            </label>
+
+            <input
+                type="password"
+                id="senhaAdmin"
+                placeholder="Digite a senha"
+            >
+
+            <button
+                class="btn btn-purple"
+                style="width:100%"
+                onclick="entrarAdmin()"
+            >
+
+                🔐 Entrar
+
+            </button>
+
+            <p
+                class="aviso"
+                style="text-align:center"
+            >
+
+                Senha inicial:
+                <strong>1234</strong>
+
+            </p>
+
+        </div>
+
+        <div
+            class="admin-painel"
+            id="adminPainel"
+        >
+
+            <div class="admin-stats">
+
+                <div class="stat">
+
+                    <strong id="totalAnuncios">
+                        0
+                    </strong>
+
+                    Total
+
+                </div>
+
+                <div class="stat">
+
+                    <strong id="pendentes">
+                        0
+                    </strong>
+
+                    Pendentes
+
+                </div>
+
+                <div class="stat">
+
+                    <strong id="aprovados">
+                        0
+                    </strong>
+
+                    Aprovados
+
+                </div>
+
+                <div class="stat">
+
+                    <strong id="visualizacoes">
+                        0
+                    </strong>
+
+                    Visualizações
+
+                </div>
+
+            </div>
+
+            <div id="listaAdmin"></div>
+
+            <button
+                class="btn sair"
+                onclick="sairAdmin()"
+            >
+
+                🚪 Sair do painel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    id="contato"
+    class="contato"
+>
 
     <h2 class="section-title">
         📞 Contato
@@ -915,7 +1371,8 @@ footer {
     <a
         class="btn"
         href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
-        target="_blank">
+        target="_blank"
+    >
 
         📲 WhatsApp
 
@@ -923,7 +1380,6 @@ footer {
 
 </section>
 
-<!-- RODAPÉ -->
 <footer>
 
     <p>
@@ -937,14 +1393,19 @@ footer {
 </footer>
 
 
-<!-- =====================================================
-     ASSISTENTE ROBÔ
-===================================================== -->
+<!-- =========================
+     MASCOTE ROBÔ
+========================= -->
 
 <div id="assistente">
 
-    <div class="robo-fala" id="falaRobo">
+    <div
+        class="robo-fala"
+        id="falaRobo"
+    >
+
         Olá! 👋 Eu sou a assistente da Divulgação Henrique!
+
     </div>
 
     <div class="robo">
@@ -977,21 +1438,31 @@ footer {
 
     <button
         class="assistente-btn"
-        onclick="ajudaRobo()">
+        onclick="ajudaRobo()"
+    >
 
         🤖 Ajuda
+
+    </button>
+
+    <button
+        class="assistente-voz"
+        onclick="falarRobo()"
+    >
+
+        🔊 Falar
 
     </button>
 
 </div>
 
 
-<!-- WHATSAPP FIXO -->
 <a
     class="whatsapp"
     href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
     target="_blank"
-    aria-label="Falar no WhatsApp">
+    aria-label="Falar no WhatsApp"
+>
 
     💬
 
@@ -1000,123 +1471,1077 @@ footer {
 
 <script>
 
-/* =====================================================
-   PAGAMENTO / FORMULÁRIO
-===================================================== */
+/* =========================
+   CONFIGURAÇÕES
+========================= */
 
-function gerarPagamento() {
+const WHATSAPP_ADMIN =
+    "5562984920692";
+
+const SENHA_ADMIN =
+    "1234";
+
+
+/* =========================
+   ANÚNCIOS
+========================= */
+
+let anuncios =
+    JSON.parse(
+        localStorage.getItem(
+            "anunciosHenrique"
+        ) || "[]"
+    );
+
+
+/* =========================
+   PRÉVIA DA FOTO
+========================= */
+
+function previewFoto(event){
+
+    const file =
+        event.target.files[0];
+
+    const img =
+        document.getElementById(
+            "previewImagem"
+        );
+
+    if(!file){
+
+        img.style.display =
+            "none";
+
+        return;
+    }
+
+    const reader =
+        new FileReader();
+
+    reader.onload =
+        function(e){
+
+            img.src =
+                e.target.result;
+
+            img.style.display =
+                "block";
+
+        };
+
+    reader.readAsDataURL(file);
+}
+
+
+/* =========================
+   PAGAMENTO
+========================= */
+
+function prepararPagamento(){
 
     const nome =
-        document.getElementById("nome").value.trim();
+        document.getElementById(
+            "nome"
+        ).value.trim();
 
     const titulo =
-        document.getElementById("titulo").value.trim();
+        document.getElementById(
+            "titulo"
+        ).value.trim();
+
+    const categoria =
+        document.getElementById(
+            "categoriaAnuncio"
+        ).value;
+
+    const cidade =
+        document.getElementById(
+            "cidadeAnuncio"
+        ).value.trim();
 
     const descricao =
-        document.getElementById("descricao").value.trim();
+        document.getElementById(
+            "descricao"
+        ).value.trim();
 
     const telefone =
-        document.getElementById("telefone").value.trim();
+        document.getElementById(
+            "telefone"
+        ).value.trim();
 
-    if (!nome || !titulo || !descricao || !telefone) {
+    const destaque =
+        document.getElementById(
+            "destaque"
+        ).checked;
+
+    if(
+        !nome ||
+        !titulo ||
+        !cidade ||
+        !descricao ||
+        !telefone
+    ){
 
         alert(
-            "Preencha todos os campos antes de continuar."
+            "Preencha nome, título, cidade, descrição e WhatsApp."
         );
 
         return;
     }
 
-    const pixBox =
-        document.getElementById("pixBox");
+    const valor =
+        destaque ? 10 : 5;
 
-    pixBox.style.display = "block";
+    document.getElementById(
+        "valorPix"
+    ).textContent =
+        "R$ " + valor + ",00";
 
     const mensagem =
-        "Olá Henrique! Quero publicar um anúncio no Divulgação Henrique.\n\n" +
+
+        "Olá Henrique! Quero publicar um anúncio.\n\n" +
+
         "Nome: " + nome + "\n" +
+
         "Título: " + titulo + "\n" +
+
+        "Categoria: " + categoria + "\n" +
+
+        "Cidade/UF: " + cidade + "\n" +
+
         "Descrição: " + descricao + "\n" +
-        "WhatsApp: " + telefone + "\n\n" +
-        "Valor da publicação: R$ 5,00\n" +
+
+        "WhatsApp: " + telefone + "\n" +
+
+        "Destaque: " +
+        (destaque ? "SIM" : "NÃO") + "\n" +
+
+        "Valor: R$ " +
+        valor +
+        ",00\n\n" +
+
         "Vou enviar o comprovante do Pix.";
 
     document.getElementById(
         "whatsappPagamento"
     ).href =
-        "https://wa.me/5562984920692?text=" +
-        encodeURIComponent(mensagem);
 
-    pixBox.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+        "https://wa.me/" +
+        WHATSAPP_ADMIN +
+        "?text=" +
+        encodeURIComponent(
+            mensagem
+        );
+
+    document.getElementById(
+        "pixBox"
+    ).style.display =
+        "block";
+
+    document.getElementById(
+        "pixBox"
+    ).scrollIntoView({
+
+        behavior:"smooth",
+
+        block:"center"
+
     });
 }
 
 
-/* =====================================================
-   FALAS DA ASSISTENTE
-===================================================== */
+/* =========================
+   RENDER ANÚNCIOS
+========================= */
 
-const falas = [
+function renderAnuncios(){
 
-    "Olá! 👋 Eu sou a assistente da Divulgação Henrique!",
+    const lista =
+        document.getElementById(
+            "listaAnuncios"
+        );
 
-    "📢 Quer divulgar seu negócio?",
+    const busca =
+        document.getElementById(
+            "busca"
+        ).value.toLowerCase();
 
-    "💰 Publique seu anúncio por apenas R$ 5,00!",
+    const categoria =
+        document.getElementById(
+            "categoriaFiltro"
+        ).value;
 
-    "📝 Preencha os dados na área Publicar.",
+    const cidade =
+        document.getElementById(
+            "cidadeFiltro"
+        ).value.toLowerCase();
 
-    "💅 Temos também uma área especial para unhas!",
+    let filtrados =
+        anuncios.filter(a => {
 
-    "📲 Precisa falar com Henrique? Clique no WhatsApp!",
+            if(!a.aprovado)
+                return false;
 
-    "😊 Estou aqui para ajudar você!"
+            const texto =
+                (
+                    a.titulo +
+                    " " +
+                    a.descricao +
+                    " " +
+                    a.nome
+                ).toLowerCase();
+
+            return (
+
+                (!busca ||
+                texto.includes(busca))
+
+                &&
+
+                (!categoria ||
+                a.categoria === categoria)
+
+                &&
+
+                (!cidade ||
+                a.cidade
+                .toLowerCase()
+                .includes(cidade))
+
+            );
+
+        });
+
+    filtrados.sort(
+        (a,b) =>
+            Number(b.destaque) -
+            Number(a.destaque)
+    );
+
+    if(!filtrados.length){
+
+        lista.innerHTML = `
+
+            <div class="vazio">
+
+                📢 Nenhum anúncio encontrado.
+
+                <br><br>
+
+                Seja o primeiro a anunciar!
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+    lista.innerHTML =
+
+        filtrados.map(a => `
+
+            <article
+                class="anuncio-card
+                ${a.destaque ? "destaque" : ""}"
+            >
+
+                ${
+                    a.destaque
+                    ?
+                    '<span class="selo">⭐ DESTAQUE</span>'
+                    :
+                    ''
+                }
+
+                ${
+                    a.foto
+                    ?
+                    `<img
+                        src="${a.foto}"
+                        alt="Foto do anúncio"
+                    >`
+                    :
+                    ''
+                }
+
+                <h3>
+                    ${escapeHtml(a.titulo)}
+                </h3>
+
+                <div class="meta">
+
+                    📂
+                    ${escapeHtml(a.categoria)}
+
+                    •
+
+                    📍
+                    ${escapeHtml(a.cidade)}
+
+                </div>
+
+                <p>
+
+                    ${escapeHtml(a.descricao)}
+
+                </p>
+
+                <div class="meta">
+
+                    👁️
+                    ${a.visualizacoes || 0}
+                    visualizações
+
+                </div>
+
+                <div class="acoes-anuncio">
+
+                    <a
+                        class="btn"
+                        href="https://wa.me/${somenteNumeros(a.telefone)}?text=${encodeURIComponent("Olá! Vi seu anúncio no Divulgação Henrique e gostaria de saber mais.")}"
+                        target="_blank"
+                        onclick="registrarVisualizacao(${a.id})"
+                    >
+
+                        📲 WhatsApp
+
+                    </a>
+
+                    <button
+                        class="btn btn-purple"
+                        onclick="compartilharAnuncio(${a.id})"
+                    >
+
+                        📤 Compartilhar
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        `).join("");
+}
+
+
+/* =========================
+   VISUALIZAÇÕES
+========================= */
+
+function registrarVisualizacao(id){
+
+    const anuncio =
+        anuncios.find(
+            a => a.id === id
+        );
+
+    if(!anuncio)
+        return;
+
+    anuncio.visualizacoes =
+        (anuncio.visualizacoes || 0) + 1;
+
+    salvarDados();
+}
+
+
+/* =========================
+   COMPARTILHAR
+========================= */
+
+function compartilharAnuncio(id){
+
+    const anuncio =
+        anuncios.find(
+            a => a.id === id
+        );
+
+    if(!anuncio)
+        return;
+
+    registrarVisualizacao(id);
+
+    const texto =
+
+        "📢 " +
+        anuncio.titulo +
+        "\n\n" +
+
+        anuncio.descricao +
+        "\n\n" +
+
+        "📍 " +
+        anuncio.cidade +
+        "\n\n" +
+
+        "Confira no Divulgação Henrique!";
+
+    if(navigator.share){
+
+        navigator.share({
+
+            title:
+                anuncio.titulo,
+
+            text:
+                texto,
+
+            url:
+                window.location.href
+
+        }).catch(()=>{});
+
+    }else{
+
+        const url =
+            "https://wa.me/?text=" +
+            encodeURIComponent(
+                texto +
+                "\n\n" +
+                window.location.href
+            );
+
+        window.open(
+            url,
+            "_blank"
+        );
+    }
+
+    renderAnuncios();
+}
+
+
+/* =========================
+   SALVAR
+========================= */
+
+function salvarDados(){
+
+    localStorage.setItem(
+        "anunciosHenrique",
+        JSON.stringify(anuncios)
+    );
+
+}
+
+
+/* =========================
+   ADMIN
+========================= */
+
+function entrarAdmin(){
+
+    const senha =
+        document.getElementById(
+            "senhaAdmin"
+        ).value;
+
+    if(
+        senha !== SENHA_ADMIN
+    ){
+
+        alert(
+            "Senha incorreta."
+        );
+
+        return;
+    }
+
+    document.getElementById(
+        "adminLogin"
+    ).style.display =
+        "none";
+
+    document.getElementById(
+        "adminPainel"
+    ).style.display =
+        "block";
+
+    renderAdmin();
+}
+
+
+function sairAdmin(){
+
+    document.getElementById(
+        "adminPainel"
+    ).style.display =
+        "none";
+
+    document.getElementById(
+        "adminLogin"
+    ).style.display =
+        "block";
+
+    document.getElementById(
+        "senhaAdmin"
+    ).value = "";
+
+}
+
+
+function renderAdmin(){
+
+    const lista =
+        document.getElementById(
+            "listaAdmin"
+        );
+
+    const total =
+        anuncios.length;
+
+    const pendentes =
+        anuncios.filter(
+            a => !a.aprovado
+        ).length;
+
+    const aprovados =
+        anuncios.filter(
+            a => a.aprovado
+        ).length;
+
+    const views =
+        anuncios.reduce(
+            (total,a) =>
+                total +
+                Number(
+                    a.visualizacoes || 0
+                ),
+            0
+        );
+
+    document.getElementById(
+        "totalAnuncios"
+    ).textContent =
+        total;
+
+    document.getElementById(
+        "pendentes"
+    ).textContent =
+        pendentes;
+
+    document.getElementById(
+        "aprovados"
+    ).textContent =
+        aprovados;
+
+    document.getElementById(
+        "visualizacoes"
+    ).textContent =
+        views;
+
+    if(!anuncios.length){
+
+        lista.innerHTML = `
+
+            <div class="vazio">
+
+                Nenhum anúncio cadastrado.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+    lista.innerHTML =
+
+        anuncios
+        .slice()
+        .reverse()
+        .map(a => `
+
+            <div class="admin-anuncio">
+
+                ${
+                    a.destaque
+                    ?
+                    '<span class="selo">⭐ DESTAQUE</span>'
+                    :
+                    ''
+                }
+
+                <h3>
+
+                    ${escapeHtml(a.titulo)}
+
+                </h3>
+
+                <p>
+
+                    <strong>
+                        ${escapeHtml(a.nome)}
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    📂
+                    ${escapeHtml(a.categoria)}
+
+                    <br>
+
+                    📍
+                    ${escapeHtml(a.cidade)}
+
+                    <br>
+
+                    👁️
+                    ${a.visualizacoes || 0}
+                    visualizações
+
+                    <br>
+
+                    Status:
+                    ${
+                        a.aprovado
+                        ?
+                        "✅ Aprovado"
+                        :
+                        "⏳ Pendente"
+                    }
+
+                </p>
+
+                <div class="admin-acoes">
+
+                    ${
+                        !a.aprovado
+                        ?
+                        `
+                        <button
+                            class="aprovar"
+                            onclick="aprovarAnuncio(${a.id})"
+                        >
+                            ✅ Aprovar
+                        </button>
+                        `
+                        :
+                        ''
+                    }
+
+                    <button
+                        class="destacar"
+                        onclick="alternarDestaque(${a.id})"
+                    >
+
+                        ${
+                            a.destaque
+                            ?
+                            "☆ Tirar destaque"
+                            :
+                            "⭐ Destacar"
+                        }
+
+                    </button>
+
+                    <button
+                        class="editar"
+                        onclick="editarAnuncio(${a.id})"
+                    >
+
+                        ✏️ Editar
+
+                    </button>
+
+                    <button
+                        class="excluir"
+                        onclick="excluirAnuncio(${a.id})"
+                    >
+
+                        🗑️ Excluir
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `).join("");
+}
+
+
+function aprovarAnuncio(id){
+
+    const anuncio =
+        anuncios.find(
+            a => a.id === id
+        );
+
+    if(!anuncio)
+        return;
+
+    anuncio.aprovado =
+        true;
+
+    salvarDados();
+
+    renderAdmin();
+
+    renderAnuncios();
+
+}
+
+
+function alternarDestaque(id){
+
+    const anuncio =
+        anuncios.find(
+            a => a.id === id
+        );
+
+    if(!anuncio)
+        return;
+
+    anuncio.destaque =
+        !anuncio.destaque;
+
+    salvarDados();
+
+    renderAdmin();
+
+    renderAnuncios();
+
+}
+
+
+function excluirAnuncio(id){
+
+    if(
+        !confirm(
+            "Tem certeza que deseja excluir este anúncio?"
+        )
+    ){
+
+        return;
+    }
+
+    anuncios =
+        anuncios.filter(
+            a => a.id !== id
+        );
+
+    salvarDados();
+
+    renderAdmin();
+
+    renderAnuncios();
+
+}
+
+
+function editarAnuncio(id){
+
+    const anuncio =
+        anuncios.find(
+            a => a.id === id
+        );
+
+    if(!anuncio)
+        return;
+
+    const novoTitulo =
+        prompt(
+            "Novo título:",
+            anuncio.titulo
+        );
+
+    if(
+        novoTitulo !== null &&
+        novoTitulo.trim()
+    ){
+
+        anuncio.titulo =
+            novoTitulo.trim();
+
+    }
+
+    const novaDescricao =
+        prompt(
+            "Nova descrição:",
+            anuncio.descricao
+        );
+
+    if(
+        novaDescricao !== null &&
+        novaDescricao.trim()
+    ){
+
+        anuncio.descricao =
+            novaDescricao.trim();
+
+    }
+
+    salvarDados();
+
+    renderAdmin();
+
+    renderAnuncios();
+
+}
+
+
+/* =========================
+   AUXILIARES
+========================= */
+
+function somenteNumeros(valor){
+
+    return valor.replace(
+        /\D/g,
+        ""
+    );
+
+}
+
+
+function escapeHtml(valor){
+
+    return String(valor).replace(
+        /[&<>"']/g,
+        function(m){
+
+            return {
+
+                "&":"&amp;",
+                "<":"&lt;",
+                ">":"&gt;",
+                '"':"&quot;",
+                "'":"&#039;"
+
+            }[m];
+
+        }
+    );
+
+}
+
+
+/* =========================
+   ROBÔ — VOZ
+========================= */
+
+const falasRobo = [
+
+    "Olá! Eu sou a assistente da Divulgação Henrique!",
+
+    "Quer divulgar seu negócio? Clique em Publicar!",
+
+    "Você pode publicar seu anúncio por apenas cinco reais!",
+
+    "Você também pode colocar uma foto no seu anúncio.",
+
+    "Temos anúncios em destaque para chamar mais atenção!",
+
+    "Use a busca para encontrar anúncios no site.",
+
+    "Você pode compartilhar os anúncios com seus amigos!",
+
+    "Se precisar de ajuda, clique no botão Ajuda!"
 
 ];
 
 let falaAtual = 0;
 
-function trocarFala() {
 
-    const fala =
-        document.getElementById("falaRobo");
+/*
+   Remove emojis antes de mandar
+   o texto para a voz.
+*/
 
-    falaAtual++;
+function textoParaVoz(texto){
 
-    if (falaAtual >= falas.length) {
-        falaAtual = 0;
+    return texto
+        .replace(
+            /[\u{1F300}-\u{1FAFF}]/gu,
+            ""
+        )
+        .replace(
+            /[\u{2600}-\u{27BF}]/gu,
+            ""
+        )
+        .trim();
+
+}
+
+
+/*
+   Função principal da fala.
+*/
+
+function falarTexto(texto){
+
+    if(
+        !("speechSynthesis" in window)
+    ){
+
+        alert(
+            "Seu navegador não possui suporte para voz."
+        );
+
+        return;
     }
 
-    fala.textContent =
-        falas[falaAtual];
-}
-
-setInterval(trocarFala, 5000);
-
-
-/* =====================================================
-   BOTÃO AJUDA
-===================================================== */
-
-function ajudaRobo() {
+    window.speechSynthesis.cancel();
 
     const fala =
-        document.getElementById("falaRobo");
+        new SpeechSynthesisUtterance(
+            textoParaVoz(texto)
+        );
 
-    fala.textContent =
-        "🤖 Posso ajudar! Clique em Publicar para anunciar por R$ 5,00.";
+    fala.lang =
+        "pt-BR";
 
-    document
-        .getElementById("publicar")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    fala.rate =
+        0.95;
+
+    fala.pitch =
+        1.15;
+
+    fala.volume =
+        1;
+
+    const vozes =
+        window.speechSynthesis.getVoices();
+
+    const vozPortugues =
+        vozes.find(
+            voz =>
+                voz.lang &&
+                voz.lang
+                .toLowerCase()
+                .startsWith("pt-br")
+        )
+        ||
+        vozes.find(
+            voz =>
+                voz.lang &&
+                voz.lang
+                .toLowerCase()
+                .startsWith("pt")
+        );
+
+    if(vozPortugues){
+
+        fala.voice =
+            vozPortugues;
+
+    }
+
+    window.speechSynthesis.speak(
+        fala
+    );
 
 }
+
+
+/*
+   Botão 🔊 Falar.
+*/
+
+function falarRobo(){
+
+    const texto =
+        falasRobo[falaAtual];
+
+    falarTexto(texto);
+
+    const balao =
+        document.getElementById(
+            "falaRobo"
+        );
+
+    balao.textContent =
+        texto;
+
+    balao.style.opacity =
+        "1";
+
+}
+
+
+/*
+   A robô troca a fala automaticamente.
+*/
+
+setInterval(
+
+    function(){
+
+        falaAtual =
+            (falaAtual + 1) %
+            falasRobo.length;
+
+        const texto =
+            falasRobo[falaAtual];
+
+        document.getElementById(
+            "falaRobo"
+        ).textContent =
+            texto;
+
+    },
+
+    6000
+
+);
+
+
+/*
+   Ajuda da robô.
+*/
+
+function ajudaRobo(){
+
+    const texto =
+        "Clique em Publicar para colocar seu anúncio no site. A publicação custa cinco reais.";
+
+    document.getElementById(
+        "falaRobo"
+    ).textContent =
+        texto;
+
+    falarTexto(
+        texto
+    );
+
+    document.getElementById(
+        "publicar"
+    ).scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+}
+
+
+/*
+   Alguns navegadores carregam
+   as vozes depois da página.
+*/
+
+if(
+    "speechSynthesis" in window
+){
+
+    window.speechSynthesis
+        .getVoices();
+
+}
+
+
+/* =========================
+   INICIALIZAÇÃO
+========================= */
+
+renderAnuncios();
 
 </script>
 
 </body>
-</html>
+    </html>
