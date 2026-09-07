@@ -7,7 +7,7 @@
 
 <title>Divulgação Henrique | Unhas e Divulgações</title>
 
-<meta name="description" content="Divulgação Henrique - Divulgação de serviços, ofertas e unhas. Alongamento em fibra de vidro, esmaltação em gel, blindagem e banho em gel.">
+<meta name="description" content="Divulgação Henrique - Divulgue seu negócio, serviço, produto ou oferta por apenas R$ 5,00.">
 
 <style>
 * {
@@ -15,6 +15,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -52,7 +56,7 @@ nav a {
     color: #8e24aa;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
 .container {
@@ -87,6 +91,12 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-pix {
+    background: #008f5a;
 }
 
 .section-title {
@@ -173,6 +183,92 @@ nav a {
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
+/* PUBLICAÇÃO */
+
+.publicar {
+    background: linear-gradient(135deg, #ffffff, #fff0f8);
+    border: 2px solid #d81b60;
+    border-radius: 25px;
+    padding: 30px 20px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.publicar h2 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+.publicar .preco {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #8e24aa;
+    margin: 15px 0;
+}
+
+.publicar .info {
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: auto;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #8e24aa;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.pix-box {
+    display: none;
+    background: #f1fff9;
+    border: 2px solid #00a86b;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pix-box h3 {
+    color: #008f5a;
+    margin-bottom: 10px;
+}
+
+.pix-valor {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.aviso {
+    font-size: 14px;
+    color: #555;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
 .contato {
     text-align: center;
     padding: 35px 15px;
@@ -185,6 +281,296 @@ footer {
     padding: 25px;
     margin-top: 30px;
 }
+
+/* =========================
+   ASSISTENTE ROBÔ
+========================= */
+
+#assistente {
+    position: fixed;
+    left: 15px;
+    bottom: 18px;
+    width: 105px;
+    height: 150px;
+    z-index: 2000;
+    pointer-events: none;
+    animation: andar 10s ease-in-out infinite alternate;
+}
+
+/* Balão */
+
+.robo-fala {
+    position: absolute;
+    bottom: 135px;
+    left: 0;
+    width: 230px;
+    background: white;
+    color: #4a148c;
+    padding: 12px 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.22);
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: falar 5s ease-in-out infinite;
+}
+
+.robo-fala::after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: -10px;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Corpo do robô */
+
+.robo {
+    position: absolute;
+    bottom: 0;
+    left: 22px;
+    width: 65px;
+    height: 90px;
+    background: linear-gradient(145deg, #e9e9f7, #b8b8d9);
+    border: 3px solid #4a148c;
+    border-radius: 18px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+/* Cabeça */
+
+.robo-cabeca {
+    position: absolute;
+    width: 72px;
+    height: 58px;
+    left: -7px;
+    top: -53px;
+    background: linear-gradient(145deg, #ffffff, #d6d6ec);
+    border: 3px solid #4a148c;
+    border-radius: 18px;
+}
+
+/* Antena */
+
+.antena {
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    background: #4a148c;
+    left: 31px;
+    top: -18px;
+}
+
+.antena::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #d81b60;
+    border-radius: 50%;
+    left: -3px;
+    top: -8px;
+    animation: piscar 1s infinite;
+}
+
+/* Olhos */
+
+.olho {
+    position: absolute;
+    width: 13px;
+    height: 16px;
+    background: #4a148c;
+    border-radius: 50%;
+    top: 19px;
+    animation: piscar 4s infinite;
+}
+
+.olho-esq {
+    left: 15px;
+}
+
+.olho-dir {
+    right: 15px;
+}
+
+/* Boca */
+
+.boca {
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    border-bottom: 3px solid #d81b60;
+    border-radius: 50%;
+    left: 21px;
+    bottom: 11px;
+}
+
+/* Barriga */
+
+.tela {
+    position: absolute;
+    width: 38px;
+    height: 25px;
+    left: 11px;
+    top: 20px;
+    background: #4a148c;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+/* Braços */
+
+.braco {
+    position: absolute;
+    width: 13px;
+    height: 48px;
+    background: #c8c8df;
+    border: 3px solid #4a148c;
+    border-radius: 12px;
+    top: 8px;
+}
+
+.braco-esq {
+    left: -17px;
+    transform: rotate(20deg);
+}
+
+.braco-dir {
+    right: -17px;
+    transform: rotate(-25deg);
+    transform-origin: top center;
+    animation: acenar 1s ease-in-out infinite;
+}
+
+/* Pernas */
+
+.perna {
+    position: absolute;
+    width: 14px;
+    height: 35px;
+    background: #c8c8df;
+    border: 3px solid #4a148c;
+    border-radius: 10px;
+    bottom: -30px;
+}
+
+.perna-esq {
+    left: 9px;
+    animation: pernaEsq 0.7s infinite alternate;
+}
+
+.perna-dir {
+    right: 9px;
+    animation: pernaDir 0.7s infinite alternate;
+}
+
+/* Animações */
+
+@keyframes andar {
+    0% {
+        left: 15px;
+    }
+
+    45% {
+        left: calc(100% - 125px);
+    }
+
+    55% {
+        left: calc(100% - 125px);
+    }
+
+    100% {
+        left: 15px;
+    }
+}
+
+@keyframes falar {
+    0%, 15% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    25%, 75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    85%, 100% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes acenar {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(-70deg);
+    }
+
+    100% {
+        transform: rotate(-25deg);
+    }
+}
+
+@keyframes pernaEsq {
+    from {
+        transform: rotate(12deg);
+    }
+
+    to {
+        transform: rotate(-12deg);
+    }
+}
+
+@keyframes pernaDir {
+    from {
+        transform: rotate(-12deg);
+    }
+
+    to {
+        transform: rotate(12deg);
+    }
+}
+
+@keyframes piscar {
+    0%, 90%, 100% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.1;
+    }
+}
+
+/* Botão para falar com a assistente */
+
+.assistente-btn {
+    pointer-events: auto;
+    position: absolute;
+    bottom: -50px;
+    left: 3px;
+    border: none;
+    background: #8e24aa;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* WhatsApp */
 
 .whatsapp {
     position: fixed;
@@ -201,10 +587,11 @@ footer {
     text-decoration: none;
     font-size: 30px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    z-index: 999;
+    z-index: 1999;
 }
 
 @media (max-width: 600px) {
+
     header h1 {
         font-size: 28px;
     }
@@ -216,6 +603,16 @@ footer {
 
     .hero h2 {
         font-size: 25px;
+    }
+
+    #assistente {
+        transform: scale(0.85);
+        transform-origin: bottom left;
+    }
+
+    .robo-fala {
+        width: 190px;
+        font-size: 13px;
     }
 }
 </style>
@@ -231,6 +628,7 @@ footer {
 <nav>
     <a href="#inicio">Início</a>
     <a href="#divulgacoes">Divulgações</a>
+    <a href="#publicar">💰 Publicar</a>
     <a href="#unhas">💅 Unhas</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
@@ -238,11 +636,12 @@ footer {
 
 <section class="hero" id="inicio">
     <div class="container">
+
         <h2>Bem-vindo à Divulgação Henrique!</h2>
 
         <p>
             Encontre serviços, ofertas e divulgações em um só lugar.
-            Entre em contato pelo WhatsApp para saber mais.
+            Agora você também pode publicar seu próprio anúncio.
         </p>
 
         <a class="btn"
@@ -250,6 +649,7 @@ footer {
            target="_blank">
            📲 Falar pelo WhatsApp
         </a>
+
     </div>
 </section>
 
@@ -263,14 +663,8 @@ footer {
             <h3>📣 Divulgue seu negócio</h3>
             <p>
                 Quer divulgar seu serviço ou produto?
-                Entre em contato e saiba como anunciar.
+                Publique seu anúncio no Divulgação Henrique.
             </p>
-
-            <a class="btn"
-               href="https://wa.me/5562984920692?text=Olá%20Henrique,%20quero%20divulgar%20meu%20negócio."
-               target="_blank">
-               Quero divulgar
-            </a>
         </div>
 
         <div class="card">
@@ -291,7 +685,98 @@ footer {
 
 </section>
 
-<!-- DIVULGAÇÃO DE UNHAS -->
+<section id="publicar" class="container">
+
+    <div class="publicar">
+
+        <h2>📢 Publique seu anúncio</h2>
+
+        <div class="preco">R$ 5,00</div>
+
+        <p class="info">
+            Divulgue seu negócio, produto, serviço ou oferta.
+            Preencha os dados abaixo e depois faça o pagamento
+            da taxa de publicação.
+        </p>
+
+        <div class="formulario">
+
+            <label for="nome">Seu nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+            <label for="titulo">Título do anúncio</label>
+
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Ex.: Promoção de unhas"
+            >
+
+            <label for="descricao">Descrição</label>
+
+            <textarea
+                id="descricao"
+                placeholder="Descreva seu produto, serviço ou oferta"
+            ></textarea>
+
+            <label for="telefone">WhatsApp para contato</label>
+
+            <input
+                type="tel"
+                id="telefone"
+                placeholder="Ex.: (62) 99999-9999"
+            >
+
+            <button
+                class="btn btn-pix"
+                onclick="gerarPagamento()">
+
+                💚 Continuar para pagamento — R$ 5,00
+
+            </button>
+
+        </div>
+
+        <div class="pix-box" id="pixBox">
+
+            <h3>💚 Pagamento via Pix</h3>
+
+            <p>Valor da publicação:</p>
+
+            <div class="pix-valor">
+                R$ 5,00
+            </div>
+
+            <p>
+                Após realizar o Pix, envie o comprovante
+                pelo WhatsApp para confirmar a publicação.
+            </p>
+
+            <a
+                id="whatsappPagamento"
+                class="btn"
+                href="#"
+                target="_blank">
+
+                📲 Enviar comprovante pelo WhatsApp
+
+            </a>
+
+            <p class="aviso">
+                ⚠️ A publicação somente será liberada após
+                a confirmação do pagamento e análise do anúncio.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 <section id="unhas" class="container">
 
@@ -327,12 +812,13 @@ footer {
 
         </div>
 
-        <!-- WHATSAPP EXCLUSIVO DAS UNHAS -->
+        <a
+            class="btn"
+            href="https://wa.me/5562982225188?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20serviços%20de%20unhas."
+            target="_blank">
 
-        <a class="btn"
-           href="https://wa.me/5562982225188?text=Olá,%20vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20serviços%20de%20unhas."
-           target="_blank">
-           📲 Agendar pelo WhatsApp
+            📲 Agendar pelo WhatsApp
+
         </a>
 
     </div>
@@ -365,29 +851,228 @@ footer {
 
     <h2 class="section-title">📞 Contato</h2>
 
-    <p>Entre em contato pelo WhatsApp:</p>
+    <p>
+        Entre em contato pelo WhatsApp:
+    </p>
 
-    <a class="btn"
-       href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
-       target="_blank">
-       📲 WhatsApp
+    <a
+        class="btn"
+        href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
+        target="_blank">
+
+        📲 WhatsApp
+
     </a>
 
 </section>
 
 <footer>
+
     <p>© 2026 Divulgação Henrique</p>
+
     <p>Todos os direitos reservados.</p>
+
 </footer>
 
-<!-- WHATSAPP PRINCIPAL DO SITE -->
 
-<a class="whatsapp"
-   href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
-   target="_blank"
-   aria-label="Falar no WhatsApp">
-   💬
+<!-- =================================
+     ASSISTENTE ROBÔ
+================================= -->
+
+<div id="assistente">
+
+    <div class="robo-fala" id="falaRobo">
+        Olá! 👋 Eu sou a assistente da Divulgação Henrique!
+    </div>
+
+    <div class="robo">
+
+        <div class="antena"></div>
+
+        <div class="robo-cabeca">
+
+            <div class="olho olho-esq"></div>
+            <div class="olho olho-dir"></div>
+
+            <div class="boca"></div>
+
+        </div>
+
+        <div class="tela">
+            HI
+        </div>
+
+        <div class="braco braco-esq"></div>
+
+        <div class="braco braco-dir"></div>
+
+        <div class="perna perna-esq"></div>
+
+        <div class="perna perna-dir"></div>
+
+    </div>
+
+    <button
+        class="assistente-btn"
+        onclick="ajudaRobo()">
+
+        🤖 Ajuda
+
+    </button>
+
+</div>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/5562984920692?text=Olá%20Henrique,%20vim%20pelo%20site."
+    target="_blank"
+    aria-label="Falar no WhatsApp">
+
+    💬
+
 </a>
+
+
+<script>
+
+/* ==========================
+   PAGAMENTO
+========================== */
+
+function gerarPagamento() {
+
+    const nome =
+        document.getElementById("nome").value.trim();
+
+    const titulo =
+        document.getElementById("titulo").value.trim();
+
+    const descricao =
+        document.getElementById("descricao").value.trim();
+
+    const telefone =
+        document.getElementById("telefone").value.trim();
+
+    if (!nome || !titulo || !descricao || !telefone) {
+
+        alert(
+            "Preencha todos os campos antes de continuar."
+        );
+
+        return;
+    }
+
+    const pixBox =
+        document.getElementById("pixBox");
+
+    pixBox.style.display = "block";
+
+    const mensagem =
+        "Olá Henrique! Quero publicar um anúncio no Divulgação Henrique.%0A%0A" +
+        "Nome: " + encodeURIComponent(nome) + "%0A" +
+        "Título: " + encodeURIComponent(titulo) + "%0A" +
+        "Descrição: " + encodeURIComponent(descricao) + "%0A" +
+        "WhatsApp: " + encodeURIComponent(telefone) + "%0A%0A" +
+        "Valor da publicação: R$ 5,00%0A" +
+        "Vou enviar o comprovante do Pix.";
+
+    document.getElementById(
+        "whatsappPagamento"
+    ).href =
+        "https://wa.me/5562984920692?text=" +
+        mensagem;
+
+    pixBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* ==========================
+   FALAS DA ASSISTENTE
+========================== */
+
+const falas = [
+
+    "Olá! 👋 Eu sou a assistente da Divulgação Henrique!",
+
+    "📢 Quer divulgar seu negócio?",
+
+    "💰 Você pode solicitar uma publicação por apenas R$ 5,00!",
+
+    "📝 Preencha os dados do seu anúncio na seção Publicar.",
+
+    "💅 Também temos uma área especial para divulgação de unhas!",
+
+    "📲 Precisa falar com Henrique? É só tocar no WhatsApp!",
+
+    "😊 Estou aqui para ajudar você!"
+];
+
+let falaAtual = 0;
+
+function trocarFala() {
+
+    const fala =
+        document.getElementById("falaRobo");
+
+    falaAtual++;
+
+    if (falaAtual >= falas.length) {
+        falaAtual = 0;
+    }
+
+    fala.textContent =
+        falas[falaAtual];
+}
+
+setInterval(trocarFala, 5000);
+
+
+/* ==========================
+   BOTÃO DA ASSISTENTE
+========================== */
+
+function ajudaRobo() {
+
+    const fala =
+        document.getElementById("falaRobo");
+
+    fala.textContent =
+        "🤖 Posso ajudar! Clique em Publicar para anunciar por R$ 5,00 ou fale com Henrique pelo WhatsApp.";
+
+    document
+        .getElementById("publicar")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* ==========================
+   PARAR ANIMAÇÃO AO CLICAR
+   NO BOTÃO
+========================== */
+
+document
+    .querySelector(".assistente-btn")
+    .addEventListener("click", function() {
+
+        const assistente =
+            document.getElementById("assistente");
+
+        assistente.style.animationPlayState =
+            "paused";
+
+    });
+
+</script>
 
 </body>
 </html>
